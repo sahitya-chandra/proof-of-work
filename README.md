@@ -4,10 +4,12 @@
 I have actively contributed to various open-source projects, improving usability, accessibility, and functionality. Below are my contributions:
 
 ### Middleware HQ
+- [#642](https://github.com/middlewarehq/middleware/pull/642)
 - [#602](https://github.com/middlewarehq/middleware/pull/602)
 - [#586](https://github.com/middlewarehq/middleware/pull/586)
 
 ### RUXAILAB
+- [#830](https://github.com/ruxailab/RUXAILAB/pull/830)
 - [#639](https://github.com/ruxailab/RUXAILAB/pull/639)
 - [#621](https://github.com/ruxailab/RUXAILAB/pull/621)
 - [#613](https://github.com/ruxailab/RUXAILAB/pull/613)
