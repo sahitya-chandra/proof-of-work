@@ -3,10 +3,6 @@
 ## 🔥 Open Source Contributions
 I have actively contributed to various open-source projects, improving usability, accessibility, and functionality. Below are my contributions:
 
-### Middleware HQ
-- [#642](https://github.com/middlewarehq/middleware/pull/642)
-- [#602](https://github.com/middlewarehq/middleware/pull/602)
-- [#586](https://github.com/middlewarehq/middleware/pull/586)
 
 ### RUXAILAB
 - [#830](https://github.com/ruxailab/RUXAILAB/pull/830)
@@ -24,6 +20,11 @@ I have actively contributed to various open-source projects, improving usability
 - [#567](https://github.com/ruxailab/RUXAILAB/pull/567)
 - [#559](https://github.com/ruxailab/RUXAILAB/pull/559)
 - [#554](https://github.com/ruxailab/RUXAILAB/pull/554)
+
+### Middleware HQ
+- [#642](https://github.com/middlewarehq/middleware/pull/642)
+- [#602](https://github.com/middlewarehq/middleware/pull/602)
+- [#586](https://github.com/middlewarehq/middleware/pull/586)
 
 ### Internet Health Report
 - [#919](https://github.com/InternetHealthReport/ihr-website/pull/919)
