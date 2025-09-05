@@ -16,7 +16,7 @@ jobs:
         run: pip install PyGithub python-dotenv
       - name: Run script
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: python update_readme.py
       - name: Commit changes
         run: |
