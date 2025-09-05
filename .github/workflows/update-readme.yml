@@ -1,0 +1,27 @@
+name: Update README with PRs
+on:
+  schedule:
+    - cron: '0 0 * * 0'
+  workflow_dispatch: # manual
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies
+        run: pip install PyGithub python-dotenv
+      - name: Run script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python update_readme.py
+      - name: Commit changes
+        run: |
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update README with latest PRs"
+          git push
