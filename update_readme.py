@@ -8,7 +8,7 @@ load_dotenv()
 auth = Auth.Token(os.getenv("GITHUB_TOKEN"))
 g = Github(auth=auth)
 
-config_file = ""
+config_file = "config.json"
 orgs_to_track = []
 if os.path.exists(config_file):
     with open(config_file, "r") as f:
@@ -36,7 +36,7 @@ try:
                     "full_name": pr.repository.full_name,
                     "number": pr.number,
                     "title": pr.title,
-                    "state": pr.state.capitalize(),
+                    "state": "Merged" if full_pr.merged_at else pr.state.capitalize(),
                     "url": pr.html_url,
                     "created_at": pr.created_at.strftime("%Y-%m-%d"),
                     "merged_at": full_pr.merged_at.strftime("%Y-%m-%d") if full_pr.merged_at else None
@@ -56,7 +56,13 @@ merged_prs = sum(
 )
 readme_content += f"**Total PRs**: {total_prs} | **Merged PRs**: {merged_prs}\n\n"
 
-for org, prs in sorted(prs_by_org.items()):
+if orgs_to_track:
+    ordered_orgs = [org for org in orgs_to_track if org in prs_by_org]
+else:
+    ordered_orgs = sorted(prs_by_org.keys())
+
+for org in ordered_orgs:
+    prs = prs_by_org[org]
     if prs:
         readme_content += f"## Organization: {org}\n"
         readme_content += "| Repository | PR Title | Status | Created At | Merged At | Link |\n"
