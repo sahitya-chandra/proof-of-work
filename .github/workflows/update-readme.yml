@@ -28,4 +28,4 @@ jobs:
           git config user.email "action@github.com"
           git add README.md
           git diff --staged --quiet || git commit -m "Update README with latest PRs"
-          git push origin HEAD:${{ github.ref_name }}
+          git push https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git HEAD:${{ github.ref_name }}
