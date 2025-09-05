@@ -3,6 +3,10 @@ on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch: # manual
+
+permissions:
+  contents: write
+
 jobs:
   update-readme:
     runs-on: ubuntu-latest
@@ -24,4 +28,4 @@ jobs:
           git config user.email "action@github.com"
           git add README.md
           git diff --staged --quiet || git commit -m "Update README with latest PRs"
-          git push
+          git push origin HEAD:${{ github.ref_name }}
