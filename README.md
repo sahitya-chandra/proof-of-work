@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 66 | **Merged PRs**: 52
+**Total PRs**: 67 | **Merged PRs**: 53
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -31,6 +31,7 @@ My open-source contributions to public organizations.
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| RUXAILAB | fix: Heuristics Fixes | Merged | 2025-09-15 | 2025-09-15 | [PR #979](https://github.com/ruxailab/RUXAILAB/pull/979) |
 | RUXAILAB | fix: improved TemplateInfoDialog in DashboardView and ProfileView | Open | 2025-08-07 | None | [PR #964](https://github.com/ruxailab/RUXAILAB/pull/964) |
 | RUXAILAB | [GSoC'25]: UI layout Optimizations and Feature Enhancements for RUXAILAB (after Mid Term) | Merged | 2025-08-07 | 2025-08-07 | [PR #963](https://github.com/ruxailab/RUXAILAB/pull/963) |
 | RUXAILAB | chore: small null value check | Merged | 2025-08-01 | 2025-08-04 | [PR #957](https://github.com/ruxailab/RUXAILAB/pull/957) |
