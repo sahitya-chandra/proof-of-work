@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 67 | **Merged PRs**: 53
+**Total PRs**: 70 | **Merged PRs**: 56
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -22,7 +22,7 @@ My open-source contributions to public organizations.
 | cal.com | fix: add strict URL validation with consistent error message | Merged | 2025-07-31 | 2025-08-08 | [PR #22843](https://github.com/calcom/cal.com/pull/22843) |
 | cal.com | fix: allow organizer/host to cancel/reschedule even when booking options are disabled | Closed | 2025-07-30 | None | [PR #22807](https://github.com/calcom/cal.com/pull/22807) |
 | cal.com | fix: improve error messages for PayPal credential validation | Merged | 2025-07-29 | 2025-07-29 | [PR #22786](https://github.com/calcom/cal.com/pull/22786) |
-| cal.com | fix: prevent external CSS from breaking Cal.com embed | Open | 2025-07-28 | None | [PR #22778](https://github.com/calcom/cal.com/pull/22778) |
+| cal.com | fix: prevent external CSS from breaking Cal.com embed | Merged | 2025-07-28 | 2025-09-22 | [PR #22778](https://github.com/calcom/cal.com/pull/22778) |
 | cal.com | fix: center-align timezone and edit availability button on mobile layout | Merged | 2025-07-27 | 2025-07-30 | [PR #22760](https://github.com/calcom/cal.com/pull/22760) |
 | cal.com | fix(seed): prevent prisma seed failure by skipping duplicate team slug creation | Merged | 2025-07-25 | 2025-07-25 | [PR #22738](https://github.com/calcom/cal.com/pull/22738) |
 | cal.com | fix: ensure 'slug' is treated as string to satisfy typescript | Closed | 2025-07-16 | None | [PR #22556](https://github.com/calcom/cal.com/pull/22556) |
@@ -31,6 +31,9 @@ My open-source contributions to public organizations.
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| RUXAILAB | created loader using new RUXAILAB logo | Merged | 2025-09-25 | 2025-09-25 | [PR #983](https://github.com/ruxailab/RUXAILAB/pull/983) |
+| RUXAILAB | redesigned loader using new RUXAILAB logo and fixed alignments | Closed | 2025-09-22 | None | [PR #982](https://github.com/ruxailab/RUXAILAB/pull/982) |
+| RUXAILAB | fix: image upload to storage while answering | Merged | 2025-09-22 | 2025-09-22 | [PR #981](https://github.com/ruxailab/RUXAILAB/pull/981) |
 | RUXAILAB | fix: Heuristics Fixes | Merged | 2025-09-15 | 2025-09-15 | [PR #979](https://github.com/ruxailab/RUXAILAB/pull/979) |
 | RUXAILAB | fix: improved TemplateInfoDialog in DashboardView and ProfileView | Open | 2025-08-07 | None | [PR #964](https://github.com/ruxailab/RUXAILAB/pull/964) |
 | RUXAILAB | [GSoC'25]: UI layout Optimizations and Feature Enhancements for RUXAILAB (after Mid Term) | Merged | 2025-08-07 | 2025-08-07 | [PR #963](https://github.com/ruxailab/RUXAILAB/pull/963) |
