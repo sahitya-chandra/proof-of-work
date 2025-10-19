@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 74 | **Merged PRs**: 59
+**Total PRs**: 74 | **Merged PRs**: 60
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -33,7 +33,7 @@ My open-source contributions to public organizations.
 |------------|----------|--------|------------|-----------|------|
 | RUXAILAB | feat: Firebase storage usage calculation | Merged | 2025-10-14 | 2025-10-14 | [PR #1001](https://github.com/ruxailab/RUXAILAB/pull/1001) |
 | RUXAILAB | removed debug logs | Merged | 2025-10-08 | 2025-10-13 | [PR #1000](https://github.com/ruxailab/RUXAILAB/pull/1000) |
-| RUXAILAB | Fix Internationalization strings | Open | 2025-10-06 | None | [PR #995](https://github.com/ruxailab/RUXAILAB/pull/995) |
+| RUXAILAB | Fix Internationalization strings | Merged | 2025-10-06 | 2025-10-17 | [PR #995](https://github.com/ruxailab/RUXAILAB/pull/995) |
 | RUXAILAB | feat: completed the next-session card on dashboard | Merged | 2025-09-30 | 2025-10-03 | [PR #988](https://github.com/ruxailab/RUXAILAB/pull/988) |
 | RUXAILAB | created loader using new RUXAILAB logo | Merged | 2025-09-25 | 2025-09-25 | [PR #983](https://github.com/ruxailab/RUXAILAB/pull/983) |
 | RUXAILAB | redesigned loader using new RUXAILAB logo and fixed alignments | Closed | 2025-09-22 | None | [PR #982](https://github.com/ruxailab/RUXAILAB/pull/982) |
