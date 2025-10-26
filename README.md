@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 74 | **Merged PRs**: 60
+**Total PRs**: 75 | **Merged PRs**: 61
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -31,6 +31,7 @@ My open-source contributions to public organizations.
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| ruxailab-wiki | Add Sahitya Chandra GSoC'25 project final report | Merged | 2025-10-21 | 2025-10-21 | [PR #3](https://github.com/ruxailab/ruxailab-wiki/pull/3) |
 | RUXAILAB | feat: Firebase storage usage calculation | Merged | 2025-10-14 | 2025-10-14 | [PR #1001](https://github.com/ruxailab/RUXAILAB/pull/1001) |
 | RUXAILAB | removed debug logs | Merged | 2025-10-08 | 2025-10-13 | [PR #1000](https://github.com/ruxailab/RUXAILAB/pull/1000) |
 | RUXAILAB | Fix Internationalization strings | Merged | 2025-10-06 | 2025-10-17 | [PR #995](https://github.com/ruxailab/RUXAILAB/pull/995) |
