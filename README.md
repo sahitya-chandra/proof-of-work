@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 75 | **Merged PRs**: 61
+**Total PRs**: 73 | **Merged PRs**: 60
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -31,6 +31,7 @@ My open-source contributions to public organizations.
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| RUXAILAB | fix(test): CI workflow failures by correcting Jest mocks and updating tests | Open | 2025-12-01 | None | [PR #1016](https://github.com/ruxailab/RUXAILAB/pull/1016) |
 | ruxailab-wiki | Add Sahitya Chandra GSoC'25 project final report | Merged | 2025-10-21 | 2025-10-21 | [PR #3](https://github.com/ruxailab/ruxailab-wiki/pull/3) |
 | RUXAILAB | feat: Firebase storage usage calculation | Merged | 2025-10-14 | 2025-10-14 | [PR #1001](https://github.com/ruxailab/RUXAILAB/pull/1001) |
 | RUXAILAB | removed debug logs | Merged | 2025-10-08 | 2025-10-13 | [PR #1000](https://github.com/ruxailab/RUXAILAB/pull/1000) |
@@ -95,11 +96,4 @@ My open-source contributions to public organizations.
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
 | neutralinojs.github.io | Framework Developer Guide updated  | Merged | 2024-12-26 | 2025-01-28 | [PR #366](https://github.com/neutralinojs/neutralinojs.github.io/pull/366) |
-
-## Organization: The-Enthusiast-404
-| Repository | PR Title | Status | Created At | Merged At | Link |
-|------------|----------|--------|------------|-----------|------|
-| git-begin | multiple language issue | Closed | 2024-08-26 | None | [PR #44](https://github.com/The-Enthusiast-404/git-begin/pull/44) |
-| git-begin | feat: multiple language selection | Closed | 2024-08-25 | None | [PR #40](https://github.com/The-Enthusiast-404/git-begin/pull/40) |
-| git-begin | categories.ts updated | Merged | 2024-08-24 | 2024-08-25 | [PR #36](https://github.com/The-Enthusiast-404/git-begin/pull/36) |
 
