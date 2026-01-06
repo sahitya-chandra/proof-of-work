@@ -2,7 +2,7 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 73 | **Merged PRs**: 60
+**Total PRs**: 75 | **Merged PRs**: 62
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
@@ -31,7 +31,7 @@ My open-source contributions to public organizations.
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
-| RUXAILAB | fix(test): CI workflow failures by correcting Jest mocks and updating tests | Open | 2025-12-01 | None | [PR #1016](https://github.com/ruxailab/RUXAILAB/pull/1016) |
+| RUXAILAB | fix(test): CI workflow failures by correcting Jest mocks and updating tests | Merged | 2025-12-01 | 2025-12-28 | [PR #1016](https://github.com/ruxailab/RUXAILAB/pull/1016) |
 | ruxailab-wiki | Add Sahitya Chandra GSoC'25 project final report | Merged | 2025-10-21 | 2025-10-21 | [PR #3](https://github.com/ruxailab/ruxailab-wiki/pull/3) |
 | RUXAILAB | feat: Firebase storage usage calculation | Merged | 2025-10-14 | 2025-10-14 | [PR #1001](https://github.com/ruxailab/RUXAILAB/pull/1001) |
 | RUXAILAB | removed debug logs | Merged | 2025-10-08 | 2025-10-13 | [PR #1000](https://github.com/ruxailab/RUXAILAB/pull/1000) |
@@ -91,6 +91,12 @@ My open-source contributions to public organizations.
 | ihr-website | fix: Fixed the hiding behavior of sidebar with footer in Documentation.vue | Merged | 2025-02-17 | 2025-02-19 | [PR #909](https://github.com/InternetHealthReport/ihr-website/pull/909) |
 | ihr-website | Added color contrast to the active option in dropdown menu of navbar | Merged | 2025-02-14 | 2025-02-14 | [PR #901](https://github.com/InternetHealthReport/ihr-website/pull/901) |
 | ihr-website | Improved the navbar design in mobile UI for enhanced User Experience | Merged | 2025-02-04 | 2025-02-05 | [PR #892](https://github.com/InternetHealthReport/ihr-website/pull/892) |
+
+## Organization: kagent-dev
+| Repository | PR Title | Status | Created At | Merged At | Link |
+|------------|----------|--------|------------|-----------|------|
+| kagent | feat: add configurable registry support for local build/run/deploy commands | Open | 2025-11-15 | None | [PR #1106](https://github.com/kagent-dev/kagent/pull/1106) |
+| kagent | feat(run): add --build flag to rebuild image before running | Merged | 2025-11-08 | 2025-11-12 | [PR #1098](https://github.com/kagent-dev/kagent/pull/1098) |
 
 ## Organization: neutralinojs
 | Repository | PR Title | Status | Created At | Merged At | Link |
