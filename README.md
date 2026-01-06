@@ -2,11 +2,12 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 75 | **Merged PRs**: 62
+**Total PRs**: 76 | **Merged PRs**: 62
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| cal.com | fix(api-v2): correct license key validation logic and headers | Open | 2026-01-06 | None | [PR #26508](https://github.com/calcom/cal.com/pull/26508) |
 | cal.com | fix: incorrect time slot generation for non-hour-aligned availability slot | Closed | 2025-08-30 | None | [PR #23464](https://github.com/calcom/cal.com/pull/23464) |
 | cal.com | fix: skip Select Account step if only one account is available | Open | 2025-08-28 | None | [PR #23432](https://github.com/calcom/cal.com/pull/23432) |
 | cal.com | fix: remove event type URL for managed event types | Merged | 2025-08-26 | 2025-08-30 | [PR #23357](https://github.com/calcom/cal.com/pull/23357) |
