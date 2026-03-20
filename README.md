@@ -2,11 +2,18 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 76 | **Merged PRs**: 63
+**Total PRs**: 83 | **Merged PRs**: 64
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| cal.com | feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections | Merged | 2026-03-12 | 2026-03-18 | [PR #28387](https://github.com/calcom/cal.com/pull/28387) |
+| companion | feat(cli): add unified calendar API commands | Open | 2026-03-12 | None | [PR #31](https://github.com/calcom/companion/pull/31) |
+| cal.com | feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command | Closed | 2026-03-05 | None | [PR #28297](https://github.com/calcom/cal.com/pull/28297) |
+| cal.com | feat(app-store): add Slack app for booking notifications in AI Slack Bot | Closed | 2026-02-25 | None | [PR #28181](https://github.com/calcom/cal.com/pull/28181) |
+| cal.com | fix(routing-forms): use event-type FormBuilder for booking questions | Open | 2026-02-23 | None | [PR #28145](https://github.com/calcom/cal.com/pull/28145) |
+| cal.com | feat(stripe): charge different prices per event duration | Open | 2026-02-19 | None | [PR #28068](https://github.com/calcom/cal.com/pull/28068) |
+| cal.com | fix(form-builder): show default label when field label is only whitespace | Open | 2026-02-09 | None | [PR #27793](https://github.com/calcom/cal.com/pull/27793) |
 | cal.com | fix(api-v2): correct license key validation logic and headers | Closed | 2026-01-06 | None | [PR #26508](https://github.com/calcom/cal.com/pull/26508) |
 | cal.com | fix: incorrect time slot generation for non-hour-aligned availability slot | Closed | 2025-08-30 | None | [PR #23464](https://github.com/calcom/cal.com/pull/23464) |
 | cal.com | fix: skip Select Account step if only one account is available | Merged | 2025-08-28 | 2026-01-23 | [PR #23432](https://github.com/calcom/cal.com/pull/23432) |
@@ -96,7 +103,7 @@ My open-source contributions to public organizations.
 ## Organization: kagent-dev
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
-| kagent | feat: add configurable registry support for local build/run/deploy commands | Open | 2025-11-15 | None | [PR #1106](https://github.com/kagent-dev/kagent/pull/1106) |
+| kagent | feat: add configurable registry support for local build/run/deploy commands | Closed | 2025-11-15 | None | [PR #1106](https://github.com/kagent-dev/kagent/pull/1106) |
 | kagent | feat(run): add --build flag to rebuild image before running | Merged | 2025-11-08 | 2025-11-12 | [PR #1098](https://github.com/kagent-dev/kagent/pull/1098) |
 
 ## Organization: neutralinojs
