@@ -2,18 +2,21 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 83 | **Merged PRs**: 64
+**Total PRs**: 86 | **Merged PRs**: 67
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| cal.com | fix: mock delegationCredential in getRoutedUsers test to prevent flaky worker shutdown errors | Merged | 2026-03-27 | 2026-03-27 | [PR #28603](https://github.com/calcom/cal.com/pull/28603) |
+| cal.com | fix: guard against document being undefined in embed-iframe informAboutScroll | Merged | 2026-03-27 | 2026-03-27 | [PR #28596](https://github.com/calcom/cal.com/pull/28596) |
+| companion | feat: Add Cal.com MCP Server | Open | 2026-03-25 | None | [PR #62](https://github.com/calcom/companion/pull/62) |
 | cal.com | feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections | Merged | 2026-03-12 | 2026-03-18 | [PR #28387](https://github.com/calcom/cal.com/pull/28387) |
 | companion | feat(cli): add unified calendar API commands | Open | 2026-03-12 | None | [PR #31](https://github.com/calcom/companion/pull/31) |
 | cal.com | feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command | Closed | 2026-03-05 | None | [PR #28297](https://github.com/calcom/cal.com/pull/28297) |
 | cal.com | feat(app-store): add Slack app for booking notifications in AI Slack Bot | Closed | 2026-02-25 | None | [PR #28181](https://github.com/calcom/cal.com/pull/28181) |
 | cal.com | fix(routing-forms): use event-type FormBuilder for booking questions | Open | 2026-02-23 | None | [PR #28145](https://github.com/calcom/cal.com/pull/28145) |
 | cal.com | feat(stripe): charge different prices per event duration | Open | 2026-02-19 | None | [PR #28068](https://github.com/calcom/cal.com/pull/28068) |
-| cal.com | fix(form-builder): show default label when field label is only whitespace | Open | 2026-02-09 | None | [PR #27793](https://github.com/calcom/cal.com/pull/27793) |
+| cal.com | fix(form-builder): show default label when field label is only whitespace | Merged | 2026-02-09 | 2026-03-22 | [PR #27793](https://github.com/calcom/cal.com/pull/27793) |
 | cal.com | fix(api-v2): correct license key validation logic and headers | Closed | 2026-01-06 | None | [PR #26508](https://github.com/calcom/cal.com/pull/26508) |
 | cal.com | fix: incorrect time slot generation for non-hour-aligned availability slot | Closed | 2025-08-30 | None | [PR #23464](https://github.com/calcom/cal.com/pull/23464) |
 | cal.com | fix: skip Select Account step if only one account is available | Merged | 2025-08-28 | 2026-01-23 | [PR #23432](https://github.com/calcom/cal.com/pull/23432) |
