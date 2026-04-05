@@ -2,14 +2,18 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 86 | **Merged PRs**: 67
+**Total PRs**: 90 | **Merged PRs**: 70
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| companion | feat(mcp-server): production-grade improvements | Merged | 2026-04-02 | 2026-04-04 | [PR #68](https://github.com/calcom/companion/pull/68) |
+| cal.com | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28683](https://github.com/calcom/cal.com/pull/28683) |
+| cal.com | fix: resolve flaky 'Book on column layout' E2E test | Merged | 2026-03-31 | 2026-03-31 | [PR #28682](https://github.com/calcom/cal.com/pull/28682) |
+| cal.com | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28681](https://github.com/calcom/cal.com/pull/28681) |
 | cal.com | fix: mock delegationCredential in getRoutedUsers test to prevent flaky worker shutdown errors | Merged | 2026-03-27 | 2026-03-27 | [PR #28603](https://github.com/calcom/cal.com/pull/28603) |
 | cal.com | fix: guard against document being undefined in embed-iframe informAboutScroll | Merged | 2026-03-27 | 2026-03-27 | [PR #28596](https://github.com/calcom/cal.com/pull/28596) |
-| companion | feat: Add Cal.com MCP Server | Open | 2026-03-25 | None | [PR #62](https://github.com/calcom/companion/pull/62) |
+| companion | feat: Add Cal.com MCP Server | Merged | 2026-03-25 | 2026-03-31 | [PR #62](https://github.com/calcom/companion/pull/62) |
 | cal.com | feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections | Merged | 2026-03-12 | 2026-03-18 | [PR #28387](https://github.com/calcom/cal.com/pull/28387) |
 | companion | feat(cli): add unified calendar API commands | Open | 2026-03-12 | None | [PR #31](https://github.com/calcom/companion/pull/31) |
 | cal.com | feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command | Closed | 2026-03-05 | None | [PR #28297](https://github.com/calcom/cal.com/pull/28297) |
