@@ -2,11 +2,19 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 90 | **Merged PRs**: 70
+**Total PRs**: 98 | **Merged PRs**: 78
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
+| cal.com | fix: use Proxy-based CalendarServiceMap mock to prevent test flakes | Merged | 2026-04-08 | 2026-04-08 | [PR #28787](https://github.com/calcom/cal.com/pull/28787) |
+| companion | fix: fix busy-times 400 errors, surface full API error bodies, and fix booking location schema | Merged | 2026-04-07 | 2026-04-07 | [PR #75](https://github.com/calcom/companion/pull/75) |
+| companion | fix: correct MCP tool schemas against Cal.com API v2 spec | Merged | 2026-04-07 | 2026-04-09 | [PR #74](https://github.com/calcom/companion/pull/74) |
+| companion | fix: rename SERVER_URL to MCP_SERVER_URL in docker-compose.yml | Merged | 2026-04-07 | 2026-04-07 | [PR #73](https://github.com/calcom/companion/pull/73) |
+| companion | fix: improve MCP tool descriptions and add missing critical parameters | Merged | 2026-04-06 | 2026-04-07 | [PR #72](https://github.com/calcom/companion/pull/72) |
+| companion | fix: audit all 33 MCP tools against Cal.com API v2 OpenAPI spec | Merged | 2026-04-06 | 2026-04-06 | [PR #71](https://github.com/calcom/companion/pull/71) |
+| companion | fix: add parentheses around ?? || expressions to fix MCP server build | Merged | 2026-04-06 | 2026-04-06 | [PR #70](https://github.com/calcom/companion/pull/70) |
+| companion | fix: resolve Cal.com API v2 versioning issues and reduce token overhead | Merged | 2026-04-05 | 2026-04-06 | [PR #69](https://github.com/calcom/companion/pull/69) |
 | companion | feat(mcp-server): production-grade improvements | Merged | 2026-04-02 | 2026-04-04 | [PR #68](https://github.com/calcom/companion/pull/68) |
 | cal.com | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28683](https://github.com/calcom/cal.com/pull/28683) |
 | cal.com | fix: resolve flaky 'Book on column layout' E2E test | Merged | 2026-03-31 | 2026-03-31 | [PR #28682](https://github.com/calcom/cal.com/pull/28682) |
