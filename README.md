@@ -2,12 +2,13 @@
 
 My open-source contributions to public organizations.
 
-**Total PRs**: 98 | **Merged PRs**: 78
+**Total PRs**: 99 | **Merged PRs**: 79
 
 ## Organization: calcom
 | Repository | PR Title | Status | Created At | Merged At | Link |
 |------------|----------|--------|------------|-----------|------|
-| cal.com | fix: use Proxy-based CalendarServiceMap mock to prevent test flakes | Merged | 2026-04-08 | 2026-04-08 | [PR #28787](https://github.com/calcom/cal.com/pull/28787) |
+| cal.diy | fix(security): upgrade axios to 1.15.0 | Merged | 2026-04-12 | 2026-04-12 | [PR #28850](https://github.com/calcom/cal.diy/pull/28850) |
+| cal.diy | fix: use Proxy-based CalendarServiceMap mock to prevent test flakes | Merged | 2026-04-08 | 2026-04-08 | [PR #28787](https://github.com/calcom/cal.diy/pull/28787) |
 | companion | fix: fix busy-times 400 errors, surface full API error bodies, and fix booking location schema | Merged | 2026-04-07 | 2026-04-07 | [PR #75](https://github.com/calcom/companion/pull/75) |
 | companion | fix: correct MCP tool schemas against Cal.com API v2 spec | Merged | 2026-04-07 | 2026-04-09 | [PR #74](https://github.com/calcom/companion/pull/74) |
 | companion | fix: rename SERVER_URL to MCP_SERVER_URL in docker-compose.yml | Merged | 2026-04-07 | 2026-04-07 | [PR #73](https://github.com/calcom/companion/pull/73) |
@@ -16,40 +17,40 @@ My open-source contributions to public organizations.
 | companion | fix: add parentheses around ?? || expressions to fix MCP server build | Merged | 2026-04-06 | 2026-04-06 | [PR #70](https://github.com/calcom/companion/pull/70) |
 | companion | fix: resolve Cal.com API v2 versioning issues and reduce token overhead | Merged | 2026-04-05 | 2026-04-06 | [PR #69](https://github.com/calcom/companion/pull/69) |
 | companion | feat(mcp-server): production-grade improvements | Merged | 2026-04-02 | 2026-04-04 | [PR #68](https://github.com/calcom/companion/pull/68) |
-| cal.com | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28683](https://github.com/calcom/cal.com/pull/28683) |
-| cal.com | fix: resolve flaky 'Book on column layout' E2E test | Merged | 2026-03-31 | 2026-03-31 | [PR #28682](https://github.com/calcom/cal.com/pull/28682) |
-| cal.com | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28681](https://github.com/calcom/cal.com/pull/28681) |
-| cal.com | fix: mock delegationCredential in getRoutedUsers test to prevent flaky worker shutdown errors | Merged | 2026-03-27 | 2026-03-27 | [PR #28603](https://github.com/calcom/cal.com/pull/28603) |
-| cal.com | fix: guard against document being undefined in embed-iframe informAboutScroll | Merged | 2026-03-27 | 2026-03-27 | [PR #28596](https://github.com/calcom/cal.com/pull/28596) |
+| cal.diy | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28683](https://github.com/calcom/cal.diy/pull/28683) |
+| cal.diy | fix: resolve flaky 'Book on column layout' E2E test | Merged | 2026-03-31 | 2026-03-31 | [PR #28682](https://github.com/calcom/cal.diy/pull/28682) |
+| cal.diy | fix: avoid false negative in slot availability check when schedule doesn't cover date range | Closed | 2026-03-31 | None | [PR #28681](https://github.com/calcom/cal.diy/pull/28681) |
+| cal.diy | fix: mock delegationCredential in getRoutedUsers test to prevent flaky worker shutdown errors | Merged | 2026-03-27 | 2026-03-27 | [PR #28603](https://github.com/calcom/cal.diy/pull/28603) |
+| cal.diy | fix: guard against document being undefined in embed-iframe informAboutScroll | Merged | 2026-03-27 | 2026-03-27 | [PR #28596](https://github.com/calcom/cal.diy/pull/28596) |
 | companion | feat: Add Cal.com MCP Server | Merged | 2026-03-25 | 2026-03-31 | [PR #62](https://github.com/calcom/companion/pull/62) |
-| cal.com | feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections | Merged | 2026-03-12 | 2026-03-18 | [PR #28387](https://github.com/calcom/cal.com/pull/28387) |
+| cal.diy | feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections | Merged | 2026-03-12 | 2026-03-18 | [PR #28387](https://github.com/calcom/cal.diy/pull/28387) |
 | companion | feat(cli): add unified calendar API commands | Open | 2026-03-12 | None | [PR #31](https://github.com/calcom/companion/pull/31) |
-| cal.com | feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command | Closed | 2026-03-05 | None | [PR #28297](https://github.com/calcom/cal.com/pull/28297) |
-| cal.com | feat(app-store): add Slack app for booking notifications in AI Slack Bot | Closed | 2026-02-25 | None | [PR #28181](https://github.com/calcom/cal.com/pull/28181) |
-| cal.com | fix(routing-forms): use event-type FormBuilder for booking questions | Open | 2026-02-23 | None | [PR #28145](https://github.com/calcom/cal.com/pull/28145) |
-| cal.com | feat(stripe): charge different prices per event duration | Open | 2026-02-19 | None | [PR #28068](https://github.com/calcom/cal.com/pull/28068) |
-| cal.com | fix(form-builder): show default label when field label is only whitespace | Merged | 2026-02-09 | 2026-03-22 | [PR #27793](https://github.com/calcom/cal.com/pull/27793) |
-| cal.com | fix(api-v2): correct license key validation logic and headers | Closed | 2026-01-06 | None | [PR #26508](https://github.com/calcom/cal.com/pull/26508) |
-| cal.com | fix: incorrect time slot generation for non-hour-aligned availability slot | Closed | 2025-08-30 | None | [PR #23464](https://github.com/calcom/cal.com/pull/23464) |
-| cal.com | fix: skip Select Account step if only one account is available | Merged | 2025-08-28 | 2026-01-23 | [PR #23432](https://github.com/calcom/cal.com/pull/23432) |
-| cal.com | fix: remove event type URL for managed event types | Merged | 2025-08-26 | 2025-08-30 | [PR #23357](https://github.com/calcom/cal.com/pull/23357) |
-| cal.com | fix: fr and de translation for buttons on the onboarding flow | Merged | 2025-08-25 | 2025-08-25 | [PR #23347](https://github.com/calcom/cal.com/pull/23347) |
-| cal.com | fix: german translation for button in the onboarding flow | Merged | 2025-08-25 | 2025-08-25 | [PR #23336](https://github.com/calcom/cal.com/pull/23336) |
-| cal.com | fix: incorrect slot duration when rescheduling bookings | Merged | 2025-08-22 | 2025-09-03 | [PR #23290](https://github.com/calcom/cal.com/pull/23290) |
-| cal.com | chore: run atoms-e2e only when ready-for-e2e label added to PR | Closed | 2025-08-22 | None | [PR #23280](https://github.com/calcom/cal.com/pull/23280) |
-| cal.com | fix: join multiple username parameter with + in Booker atom instead of , | Merged | 2025-08-20 | 2025-08-25 | [PR #23203](https://github.com/calcom/cal.com/pull/23203) |
-| cal.com | fix: Remove Reporting page within Routing Forms | Merged | 2025-08-08 | 2025-08-11 | [PR #22990](https://github.com/calcom/cal.com/pull/22990) |
-| cal.com | fix: Remove Reporting page within Routing Forms | Closed | 2025-08-07 | None | [PR #22947](https://github.com/calcom/cal.com/pull/22947) |
-| cal.com | fix: fixed the estonian language on confirmation page | Merged | 2025-08-06 | 2025-08-06 | [PR #22936](https://github.com/calcom/cal.com/pull/22936) |
-| cal.com | docs: refactor the v2 api README file | Merged | 2025-08-05 | 2025-08-08 | [PR #22896](https://github.com/calcom/cal.com/pull/22896) |
-| cal.com | fix: add strict URL validation with consistent error message | Merged | 2025-07-31 | 2025-08-08 | [PR #22843](https://github.com/calcom/cal.com/pull/22843) |
-| cal.com | fix: allow organizer/host to cancel/reschedule even when booking options are disabled | Closed | 2025-07-30 | None | [PR #22807](https://github.com/calcom/cal.com/pull/22807) |
-| cal.com | fix: improve error messages for PayPal credential validation | Merged | 2025-07-29 | 2025-07-29 | [PR #22786](https://github.com/calcom/cal.com/pull/22786) |
-| cal.com | fix: prevent external CSS from breaking Cal.com embed | Merged | 2025-07-28 | 2025-09-22 | [PR #22778](https://github.com/calcom/cal.com/pull/22778) |
-| cal.com | fix: center-align timezone and edit availability button on mobile layout | Merged | 2025-07-27 | 2025-07-30 | [PR #22760](https://github.com/calcom/cal.com/pull/22760) |
-| cal.com | fix(seed): prevent prisma seed failure by skipping duplicate team slug creation | Merged | 2025-07-25 | 2025-07-25 | [PR #22738](https://github.com/calcom/cal.com/pull/22738) |
-| cal.com | fix: ensure 'slug' is treated as string to satisfy typescript | Closed | 2025-07-16 | None | [PR #22556](https://github.com/calcom/cal.com/pull/22556) |
-| cal.com | fix: Use Memberships with OWNER role for platform owner lookup | Merged | 2025-07-14 | 2025-08-22 | [PR #22475](https://github.com/calcom/cal.com/pull/22475) |
+| cal.diy | feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command | Closed | 2026-03-05 | None | [PR #28297](https://github.com/calcom/cal.diy/pull/28297) |
+| cal.diy | feat(app-store): add Slack app for booking notifications in AI Slack Bot | Closed | 2026-02-25 | None | [PR #28181](https://github.com/calcom/cal.diy/pull/28181) |
+| cal.diy | fix(routing-forms): use event-type FormBuilder for booking questions | Closed | 2026-02-23 | None | [PR #28145](https://github.com/calcom/cal.diy/pull/28145) |
+| cal.diy | feat(stripe): charge different prices per event duration | Open | 2026-02-19 | None | [PR #28068](https://github.com/calcom/cal.diy/pull/28068) |
+| cal.diy | fix(form-builder): show default label when field label is only whitespace | Merged | 2026-02-09 | 2026-03-22 | [PR #27793](https://github.com/calcom/cal.diy/pull/27793) |
+| cal.diy | fix(api-v2): correct license key validation logic and headers | Closed | 2026-01-06 | None | [PR #26508](https://github.com/calcom/cal.diy/pull/26508) |
+| cal.diy | fix: incorrect time slot generation for non-hour-aligned availability slot | Closed | 2025-08-30 | None | [PR #23464](https://github.com/calcom/cal.diy/pull/23464) |
+| cal.diy | fix: skip Select Account step if only one account is available | Merged | 2025-08-28 | 2026-01-23 | [PR #23432](https://github.com/calcom/cal.diy/pull/23432) |
+| cal.diy | fix: remove event type URL for managed event types | Merged | 2025-08-26 | 2025-08-30 | [PR #23357](https://github.com/calcom/cal.diy/pull/23357) |
+| cal.diy | fix: fr and de translation for buttons on the onboarding flow | Merged | 2025-08-25 | 2025-08-25 | [PR #23347](https://github.com/calcom/cal.diy/pull/23347) |
+| cal.diy | fix: german translation for button in the onboarding flow | Merged | 2025-08-25 | 2025-08-25 | [PR #23336](https://github.com/calcom/cal.diy/pull/23336) |
+| cal.diy | fix: incorrect slot duration when rescheduling bookings | Merged | 2025-08-22 | 2025-09-03 | [PR #23290](https://github.com/calcom/cal.diy/pull/23290) |
+| cal.diy | chore: run atoms-e2e only when ready-for-e2e label added to PR | Closed | 2025-08-22 | None | [PR #23280](https://github.com/calcom/cal.diy/pull/23280) |
+| cal.diy | fix: join multiple username parameter with + in Booker atom instead of , | Merged | 2025-08-20 | 2025-08-25 | [PR #23203](https://github.com/calcom/cal.diy/pull/23203) |
+| cal.diy | fix: Remove Reporting page within Routing Forms | Merged | 2025-08-08 | 2025-08-11 | [PR #22990](https://github.com/calcom/cal.diy/pull/22990) |
+| cal.diy | fix: Remove Reporting page within Routing Forms | Closed | 2025-08-07 | None | [PR #22947](https://github.com/calcom/cal.diy/pull/22947) |
+| cal.diy | fix: fixed the estonian language on confirmation page | Merged | 2025-08-06 | 2025-08-06 | [PR #22936](https://github.com/calcom/cal.diy/pull/22936) |
+| cal.diy | docs: refactor the v2 api README file | Merged | 2025-08-05 | 2025-08-08 | [PR #22896](https://github.com/calcom/cal.diy/pull/22896) |
+| cal.diy | fix: add strict URL validation with consistent error message | Merged | 2025-07-31 | 2025-08-08 | [PR #22843](https://github.com/calcom/cal.diy/pull/22843) |
+| cal.diy | fix: allow organizer/host to cancel/reschedule even when booking options are disabled | Closed | 2025-07-30 | None | [PR #22807](https://github.com/calcom/cal.diy/pull/22807) |
+| cal.diy | fix: improve error messages for PayPal credential validation | Merged | 2025-07-29 | 2025-07-29 | [PR #22786](https://github.com/calcom/cal.diy/pull/22786) |
+| cal.diy | fix: prevent external CSS from breaking Cal.com embed | Merged | 2025-07-28 | 2025-09-22 | [PR #22778](https://github.com/calcom/cal.diy/pull/22778) |
+| cal.diy | fix: center-align timezone and edit availability button on mobile layout | Merged | 2025-07-27 | 2025-07-30 | [PR #22760](https://github.com/calcom/cal.diy/pull/22760) |
+| cal.diy | fix(seed): prevent prisma seed failure by skipping duplicate team slug creation | Merged | 2025-07-25 | 2025-07-25 | [PR #22738](https://github.com/calcom/cal.diy/pull/22738) |
+| cal.diy | fix: ensure 'slug' is treated as string to satisfy typescript | Closed | 2025-07-16 | None | [PR #22556](https://github.com/calcom/cal.diy/pull/22556) |
+| cal.diy | fix: Use Memberships with OWNER role for platform owner lookup | Merged | 2025-07-14 | 2025-08-22 | [PR #22475](https://github.com/calcom/cal.diy/pull/22475) |
 
 ## Organization: ruxailab
 | Repository | PR Title | Status | Created At | Merged At | Link |
