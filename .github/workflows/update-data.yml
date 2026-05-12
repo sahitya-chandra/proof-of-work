@@ -1,29 +1,40 @@
-name: Refresh contributions
+name: Refresh contributions data
 
 on:
   schedule:
-    - cron: '0 0 * * 0'
+    - cron: '0 0 * * *'   # daily at 00:00 UTC
   workflow_dispatch:
 
 permissions:
   contents: write
+
+concurrency:
+  group: refresh-data
+  cancel-in-progress: false
 
 jobs:
   refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
+
       - name: Install dependencies
         run: pip install PyGithub python-dotenv
-      - name: Update gist and regenerate site data
+
+      - name: Regenerate docs/data.json
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_USER: ${{ github.repository_owner }}
         run: python create_gist.py
-      - name: Commit refreshed docs/data.json
+
+      - name: Commit if changed
         run: |
           if [ -n "$(git status --porcelain docs/data.json)" ]; then
             git config user.name "github-actions[bot]"

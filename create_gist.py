@@ -10,8 +10,8 @@ load_dotenv()
 token = os.getenv("GITHUB_TOKEN")
 g = Github(auth=Auth.Token(token))
 
-user = g.get_user()
-username = user.login
+# In CI the token belongs to github-actions[bot]; let the workflow override.
+username = os.getenv("GITHUB_USER") or g.get_user().login
 print(f"Fetching PRs for: {username}")
 
 two_years_ago = (datetime.now() - timedelta(days=730)).strftime("%Y-%m-%d")
@@ -203,17 +203,21 @@ for org in ordered_orgs:
 gist_content = "\n".join(lines)
 
 # ── Create the gist ────────────────────────────────────────────────────────────
+# Gist edits require a PAT with `gist` scope; built-in GITHUB_TOKEN can't do this.
+# Set UPDATE_GIST=1 (and use a PAT) when you want to refresh the gist.
 
 GIST_ID = "4dc5097ee57ce159b8d32e050b843be9"
 
-print("\nUpdating gist...")
-gist = g.get_gist(GIST_ID)
-gist.edit(
-    description="Open Source Contributions — Proof of Work (2024–2026)",
-    files={"open-source-contributions.md": InputFileContent(gist_content)},
-)
-
-print(f"\nGist updated: {gist.html_url}")
+if os.getenv("UPDATE_GIST") == "1":
+    print("\nUpdating gist...")
+    gist = g.get_gist(GIST_ID)
+    gist.edit(
+        description="Open Source Contributions — Proof of Work (2024–2026)",
+        files={"open-source-contributions.md": InputFileContent(gist_content)},
+    )
+    print(f"Gist updated: {gist.html_url}")
+else:
+    print("\nSkipping gist update (set UPDATE_GIST=1 to enable).")
 
 # ── Write docs/data.json for the github.io page ───────────────────────────────
 
