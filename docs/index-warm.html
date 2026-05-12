@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>proof of work · sahitya-chandra</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf3e8;
+      --bg-2: #f4e9d6;
+      --paper: #fffaf2;
+      --ink: #2d1810;
+      --ink-soft: #5c4636;
+      --ink-faint: #8a6f5c;
+      --line: #e6d6bf;
+      --accent: #d97757;
+      --accent-soft: #f3c7b3;
+      --merged: #6b8e23;
+      --open: #c98a3f;
+      --closed: #b85450;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { background: var(--bg); color: var(--ink); margin: 0; padding: 0; min-height: 100%; }
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      background-image:
+        radial-gradient(ellipse 700px 400px at 0% -10%, rgba(217, 119, 87, 0.18), transparent 70%),
+        radial-gradient(ellipse 600px 300px at 100% 0%, rgba(244, 233, 214, 0.6), transparent 70%);
+      background-attachment: fixed;
+    }
+    .mono { font-family: 'JetBrains Mono', ui-monospace, monospace; }
+    .serif { font-family: Fraunces, Georgia, serif; }
+
+    main { max-width: 920px; margin: 0 auto; padding: 60px 24px 96px; }
+
+    .switch {
+      display: flex; gap: 6px; margin-bottom: 36px; flex-wrap: wrap;
+      font-size: 0.78rem;
+    }
+    .switch a {
+      color: var(--ink-soft);
+      text-decoration: none;
+      padding: 5px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+      transition: all 0.15s;
+    }
+    .switch a:hover { color: var(--accent); border-color: var(--accent); }
+    .switch a.current {
+      color: var(--paper); background: var(--accent); border-color: var(--accent);
+    }
+
+    h1.title {
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(2.8rem, 8vw, 4.4rem);
+      letter-spacing: -0.02em;
+      line-height: 1;
+      margin: 0 0 6px;
+      color: var(--ink);
+      font-style: italic;
+    }
+    .subtitle {
+      margin: 0 0 32px;
+      color: var(--ink-soft);
+      font-size: 1.02rem;
+    }
+    .subtitle b { color: var(--ink); font-weight: 600; }
+    .subtitle .dot { color: var(--accent); margin: 0 6px; }
+
+    .stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 28px;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 8px 24px rgba(45, 24, 16, 0.04);
+    }
+    .stat { display: flex; flex-direction: column; gap: 2px; }
+    .stat .v {
+      font-family: Fraunces, Georgia, serif;
+      font-size: 1.7rem; font-weight: 600;
+      line-height: 1;
+    }
+    .stat .l {
+      font-size: 0.74rem;
+      color: var(--ink-faint);
+      text-transform: lowercase;
+      letter-spacing: 0.04em;
+    }
+    .stat.merged .v { color: var(--merged); }
+    .stat.open .v { color: var(--open); }
+    .stat.closed .v { color: var(--closed); }
+
+    .filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+    .filters button {
+      background: var(--paper);
+      color: var(--ink-soft);
+      border: 1px solid var(--line);
+      padding: 7px 16px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+      border-radius: 999px;
+      transition: all 0.15s;
+    }
+    .filters button:hover { color: var(--accent); border-color: var(--accent); }
+    .filters button.active {
+      color: var(--paper);
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .org {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      border-radius: 16px;
+      margin-bottom: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(45, 24, 16, 0.03);
+      transition: box-shadow 0.2s;
+    }
+    .org:hover { box-shadow: 0 8px 20px rgba(45, 24, 16, 0.08); }
+
+    .org-header {
+      display: flex; align-items: center; gap: 14px;
+      padding: 16px 20px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .org-header:hover { background: var(--bg-2); }
+
+    .chev { color: var(--accent); font-size: 0.9rem; transition: transform 0.2s; width: 14px; }
+    .org.open .chev { transform: rotate(90deg); }
+
+    .org-logo {
+      width: 30px; height: 30px;
+      border-radius: 50%;
+      object-fit: cover;
+      background: var(--bg-2);
+      border: 1px solid var(--line);
+    }
+    .org-name {
+      flex: 1;
+      font-family: Fraunces, Georgia, serif;
+      font-weight: 600;
+      font-size: 1.15rem;
+      color: var(--ink);
+    }
+    .org-meta {
+      font-size: 0.86rem;
+      color: var(--ink-soft);
+    }
+    .org-meta b { color: var(--ink); font-weight: 600; }
+    .org-meta .pill {
+      display: inline-block;
+      padding: 2px 10px;
+      border-radius: 999px;
+      background: rgba(107, 142, 35, 0.12);
+      color: var(--merged);
+      margin-left: 8px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    .prs { display: none; border-top: 1px solid var(--line); background: var(--bg); }
+    .org.open .prs { display: block; }
+
+    .pr {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 16px;
+      align-items: baseline;
+      padding: 12px 20px 12px 50px;
+      font-size: 0.92rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .pr:last-child { border-bottom: none; }
+
+    .pr-status {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: lowercase;
+      letter-spacing: 0.03em;
+      padding: 3px 10px;
+      border-radius: 999px;
+      text-align: center;
+    }
+    .pr-status.merged { background: rgba(107, 142, 35, 0.14); color: var(--merged); }
+    .pr-status.open { background: rgba(201, 138, 63, 0.14); color: var(--open); }
+    .pr-status.closed { background: rgba(184, 84, 80, 0.14); color: var(--closed); }
+
+    .pr-title a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+    .pr-title a:hover { color: var(--accent); }
+    .pr-num {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink-faint);
+      margin-right: 6px;
+      font-size: 0.84rem;
+    }
+    .pr-date {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink-faint);
+      font-size: 0.78rem;
+      white-space: nowrap;
+    }
+
+    footer {
+      margin-top: 56px;
+      padding-top: 22px;
+      border-top: 1px solid var(--line);
+      color: var(--ink-faint);
+      font-size: 0.84rem;
+      display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;
+    }
+    footer a { color: var(--ink-soft); text-decoration: none; border-bottom: 1px solid var(--line); }
+    footer a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+    @media (max-width: 600px) {
+      main { padding: 32px 18px 64px; }
+      .pr { grid-template-columns: 70px 1fr; padding-left: 26px; }
+      .pr-date { grid-column: 2; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <nav class="switch">
+    <a href="index.html">terminal</a>
+    <a href="index-dark.html">dark</a>
+    <a href="index-paper.html">paper</a>
+    <a href="index-warm.html" class="current">sunset</a>
+  </nav>
+
+  <h1 class="title">proof of work</h1>
+  <p class="subtitle">a collection of open-source contributions <span class="dot">·</span> <b id="user">sahitya-chandra</b></p>
+
+  <div class="stats" id="stats">
+    <div class="stat"><span class="v">—</span><span class="l">loading</span></div>
+  </div>
+
+  <div class="filters" id="filters" hidden>
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="merged">Merged</button>
+    <button data-filter="open">Open</button>
+    <button data-filter="closed">Closed</button>
+  </div>
+
+  <div id="list"></div>
+
+  <footer>
+    <span id="generated">&nbsp;</span>
+    <span>
+      <a href="https://github.com/sahitya-chandra" target="_blank" rel="noopener">github.com/sahitya-chandra</a>
+      &nbsp;·&nbsp;
+      <a href="https://github.com/sahitya-chandra/proof-of-work" target="_blank" rel="noopener">source</a>
+    </span>
+  </footer>
+</main>
+
+<script>
+  const STATE_LABEL = { "Merged":"merged","Merged (indirect)":"merged","Open":"open","Closed":"closed" };
+  let currentFilter = "all";
+  let data = null;
+
+  function render() {
+    const list = document.getElementById("list");
+    list.innerHTML = "";
+
+    const orgs = data.orgs.map(org => {
+      const visible = org.prs.filter(pr => currentFilter === "all" || STATE_LABEL[pr.state] === currentFilter);
+      return { ...org, visible };
+    }).filter(org => org.visible.length > 0);
+
+    if (orgs.length === 0) {
+      list.innerHTML = '<div style="color: var(--ink-faint); padding: 16px;">No entries match this filter.</div>';
+      return;
+    }
+
+    orgs.forEach(org => {
+      const card = document.createElement("div");
+      card.className = "org";
+
+      const header = document.createElement("div");
+      header.className = "org-header";
+      header.innerHTML = `
+        <span class="chev">▶</span>
+        <img class="org-logo" alt="" src="https://github.com/${org.name}.png?size=64" onerror="this.style.visibility='hidden'">
+        <span class="org-name">${escapeHtml(org.name)}</span>
+        <span class="org-meta"><b>${org.visible.length}</b> ${org.visible.length === 1 ? "PR" : "PRs"}<span class="pill">${org.merged} merged</span></span>
+      `;
+
+      const prs = document.createElement("div");
+      prs.className = "prs";
+      org.visible.forEach(pr => {
+        const row = document.createElement("div");
+        row.className = "pr";
+        const label = STATE_LABEL[pr.state] || "open";
+        const date = pr.merged_at || pr.created_at;
+        const display = label === "merged" && pr.state.includes("indirect") ? "merged*" : label;
+        row.innerHTML = `
+          <span class="pr-status ${label}">${display}</span>
+          <span class="pr-title">${pr.number ? `<span class="pr-num">#${pr.number}</span>` : ""}<a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a></span>
+          <span class="pr-date">${date || ""}</span>
+        `;
+        prs.appendChild(row);
+      });
+
+      header.onclick = () => card.classList.toggle("open");
+      card.appendChild(header);
+      card.appendChild(prs);
+      list.appendChild(card);
+    });
+  }
+
+  function renderStats() {
+    const s = data.totals;
+    document.getElementById("stats").innerHTML = `
+      <div class="stat"><span class="v">${s.prs}</span><span class="l">total</span></div>
+      <div class="stat merged"><span class="v">${s.merged}</span><span class="l">merged</span></div>
+      <div class="stat open"><span class="v">${s.open}</span><span class="l">open</span></div>
+      <div class="stat closed"><span class="v">${s.closed}</span><span class="l">closed</span></div>
+      <div class="stat"><span class="v">${data.orgs.length}</span><span class="l">orgs</span></div>
+    `;
+    if (data.generated_at) document.getElementById("generated").textContent = "Generated " + data.generated_at;
+    if (data.username) document.getElementById("user").textContent = data.username;
+  }
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+  }
+
+  document.querySelectorAll("#filters button").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll("#filters button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      currentFilter = btn.dataset.filter;
+      render();
+    });
+  });
+
+  fetch("./data.json", { cache: "no-store" })
+    .then(r => { if (!r.ok) throw new Error("data.json not found"); return r.json(); })
+    .then(json => { data = json; document.getElementById("filters").hidden = false; renderStats(); render(); })
+    .catch(err => {
+      document.getElementById("stats").innerHTML =
+        `<div style="color: var(--closed)">Failed to load data.json — ${escapeHtml(err.message)}</div>`;
+    });
+</script>
+</body>
+</html>

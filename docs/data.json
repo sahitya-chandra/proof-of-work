@@ -1,0 +1,1167 @@
+{
+  "username": "sahitya-chandra",
+  "generated_at": "2026-05-12 09:29 UTC",
+  "totals": {
+    "prs": 119,
+    "merged": 87,
+    "open": 12,
+    "closed": 20
+  },
+  "orgs": [
+    {
+      "name": "calcom",
+      "merged": 32,
+      "prs": [
+        {
+          "number": 28967,
+          "title": "fix: push Docker images to calcom/cal.com instead of calcom/cal.diy",
+          "url": "https://github.com/calcom/cal.diy/pull/28967",
+          "state": "Open",
+          "created_at": "2026-04-22",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28941,
+          "title": "fix(security): upgrade protobufjs to 7.5.5",
+          "url": "https://github.com/calcom/cal.diy/pull/28941",
+          "state": "Merged",
+          "created_at": "2026-04-20",
+          "merged_at": "2026-04-20",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28850,
+          "title": "fix(security): upgrade axios to 1.15.0",
+          "url": "https://github.com/calcom/cal.diy/pull/28850",
+          "state": "Merged",
+          "created_at": "2026-04-12",
+          "merged_at": "2026-04-12",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28787,
+          "title": "fix: use Proxy-based CalendarServiceMap mock to prevent test flakes",
+          "url": "https://github.com/calcom/cal.diy/pull/28787",
+          "state": "Merged",
+          "created_at": "2026-04-08",
+          "merged_at": "2026-04-08",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 75,
+          "title": "fix: fix busy-times 400 errors, surface full API error bodies, and fix booking location schema",
+          "url": "https://github.com/calcom/companion/pull/75",
+          "state": "Merged",
+          "created_at": "2026-04-07",
+          "merged_at": "2026-04-07",
+          "repo": "companion"
+        },
+        {
+          "number": 74,
+          "title": "fix: correct MCP tool schemas against Cal.com API v2 spec",
+          "url": "https://github.com/calcom/companion/pull/74",
+          "state": "Merged",
+          "created_at": "2026-04-07",
+          "merged_at": "2026-04-09",
+          "repo": "companion"
+        },
+        {
+          "number": 73,
+          "title": "fix: rename SERVER_URL to MCP_SERVER_URL in docker-compose.yml",
+          "url": "https://github.com/calcom/companion/pull/73",
+          "state": "Merged",
+          "created_at": "2026-04-07",
+          "merged_at": "2026-04-07",
+          "repo": "companion"
+        },
+        {
+          "number": 72,
+          "title": "fix: improve MCP tool descriptions and add missing critical parameters",
+          "url": "https://github.com/calcom/companion/pull/72",
+          "state": "Merged",
+          "created_at": "2026-04-06",
+          "merged_at": "2026-04-07",
+          "repo": "companion"
+        },
+        {
+          "number": 71,
+          "title": "fix: audit all 33 MCP tools against Cal.com API v2 OpenAPI spec",
+          "url": "https://github.com/calcom/companion/pull/71",
+          "state": "Merged",
+          "created_at": "2026-04-06",
+          "merged_at": "2026-04-06",
+          "repo": "companion"
+        },
+        {
+          "number": 70,
+          "title": "fix: add parentheses around ?? || expressions to fix MCP server build",
+          "url": "https://github.com/calcom/companion/pull/70",
+          "state": "Merged",
+          "created_at": "2026-04-06",
+          "merged_at": "2026-04-06",
+          "repo": "companion"
+        },
+        {
+          "number": 69,
+          "title": "fix: resolve Cal.com API v2 versioning issues and reduce token overhead",
+          "url": "https://github.com/calcom/companion/pull/69",
+          "state": "Merged",
+          "created_at": "2026-04-05",
+          "merged_at": "2026-04-06",
+          "repo": "companion"
+        },
+        {
+          "number": 68,
+          "title": "feat(mcp-server): production-grade improvements",
+          "url": "https://github.com/calcom/companion/pull/68",
+          "state": "Merged",
+          "created_at": "2026-04-02",
+          "merged_at": "2026-04-04",
+          "repo": "companion"
+        },
+        {
+          "number": 28683,
+          "title": "fix: avoid false negative in slot availability check when schedule doesn't cover date range",
+          "url": "https://github.com/calcom/cal.diy/pull/28683",
+          "state": "Closed",
+          "created_at": "2026-03-31",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28682,
+          "title": "fix: resolve flaky 'Book on column layout' E2E test",
+          "url": "https://github.com/calcom/cal.diy/pull/28682",
+          "state": "Merged",
+          "created_at": "2026-03-31",
+          "merged_at": "2026-03-31",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28681,
+          "title": "fix: avoid false negative in slot availability check when schedule doesn't cover date range",
+          "url": "https://github.com/calcom/cal.diy/pull/28681",
+          "state": "Closed",
+          "created_at": "2026-03-31",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28603,
+          "title": "fix: mock delegationCredential in getRoutedUsers test to prevent flaky worker shutdown errors",
+          "url": "https://github.com/calcom/cal.diy/pull/28603",
+          "state": "Merged",
+          "created_at": "2026-03-27",
+          "merged_at": "2026-03-27",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28596,
+          "title": "fix: guard against document being undefined in embed-iframe informAboutScroll",
+          "url": "https://github.com/calcom/cal.diy/pull/28596",
+          "state": "Merged",
+          "created_at": "2026-03-27",
+          "merged_at": "2026-03-27",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 62,
+          "title": "feat: Add Cal.com MCP Server",
+          "url": "https://github.com/calcom/companion/pull/62",
+          "state": "Merged",
+          "created_at": "2026-03-25",
+          "merged_at": "2026-03-31",
+          "repo": "companion"
+        },
+        {
+          "number": 28387,
+          "title": "feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections",
+          "url": "https://github.com/calcom/cal.diy/pull/28387",
+          "state": "Merged",
+          "created_at": "2026-03-12",
+          "merged_at": "2026-03-18",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 31,
+          "title": "feat(cli): add unified calendar API commands",
+          "url": "https://github.com/calcom/companion/pull/31",
+          "state": "Open",
+          "created_at": "2026-03-12",
+          "merged_at": null,
+          "repo": "companion"
+        },
+        {
+          "number": 28297,
+          "title": "feat(agent-cal): connection-based unified calendar API, SDK, and CLI with connect command",
+          "url": "https://github.com/calcom/cal.diy/pull/28297",
+          "state": "Closed",
+          "created_at": "2026-03-05",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28181,
+          "title": "feat(app-store): add Slack app for booking notifications in AI Slack Bot",
+          "url": "https://github.com/calcom/cal.diy/pull/28181",
+          "state": "Closed",
+          "created_at": "2026-02-25",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28145,
+          "title": "fix(routing-forms): use event-type FormBuilder for booking questions",
+          "url": "https://github.com/calcom/cal.diy/pull/28145",
+          "state": "Closed",
+          "created_at": "2026-02-23",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 28068,
+          "title": "feat(stripe): charge different prices per event duration",
+          "url": "https://github.com/calcom/cal.diy/pull/28068",
+          "state": "Open",
+          "created_at": "2026-02-19",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 27793,
+          "title": "fix(form-builder): show default label when field label is only whitespace",
+          "url": "https://github.com/calcom/cal.diy/pull/27793",
+          "state": "Merged",
+          "created_at": "2026-02-09",
+          "merged_at": "2026-03-22",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 26508,
+          "title": "fix(api-v2): correct license key validation logic and headers",
+          "url": "https://github.com/calcom/cal.diy/pull/26508",
+          "state": "Closed",
+          "created_at": "2026-01-06",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23464,
+          "title": "fix: incorrect time slot generation for non-hour-aligned availability slot",
+          "url": "https://github.com/calcom/cal.diy/pull/23464",
+          "state": "Closed",
+          "created_at": "2025-08-30",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23432,
+          "title": "fix: skip Select Account step if only one account is available",
+          "url": "https://github.com/calcom/cal.diy/pull/23432",
+          "state": "Merged",
+          "created_at": "2025-08-28",
+          "merged_at": "2026-01-23",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23357,
+          "title": "fix: remove event type URL for managed event types",
+          "url": "https://github.com/calcom/cal.diy/pull/23357",
+          "state": "Merged",
+          "created_at": "2025-08-26",
+          "merged_at": "2025-08-30",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23347,
+          "title": "fix: fr and de translation for buttons on the onboarding flow",
+          "url": "https://github.com/calcom/cal.diy/pull/23347",
+          "state": "Merged",
+          "created_at": "2025-08-25",
+          "merged_at": "2025-08-25",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23336,
+          "title": "fix: german translation for button in the onboarding flow",
+          "url": "https://github.com/calcom/cal.diy/pull/23336",
+          "state": "Merged",
+          "created_at": "2025-08-25",
+          "merged_at": "2025-08-25",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23290,
+          "title": "fix: incorrect slot duration when rescheduling bookings",
+          "url": "https://github.com/calcom/cal.diy/pull/23290",
+          "state": "Merged",
+          "created_at": "2025-08-22",
+          "merged_at": "2025-09-03",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23280,
+          "title": "chore: run atoms-e2e only when ready-for-e2e label added to PR",
+          "url": "https://github.com/calcom/cal.diy/pull/23280",
+          "state": "Closed",
+          "created_at": "2025-08-22",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 23203,
+          "title": "fix: join multiple username parameter with + in Booker atom instead of ,",
+          "url": "https://github.com/calcom/cal.diy/pull/23203",
+          "state": "Merged",
+          "created_at": "2025-08-20",
+          "merged_at": "2025-08-25",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22990,
+          "title": "fix: Remove Reporting page within Routing Forms",
+          "url": "https://github.com/calcom/cal.diy/pull/22990",
+          "state": "Merged",
+          "created_at": "2025-08-08",
+          "merged_at": "2025-08-11",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22947,
+          "title": "fix: Remove Reporting page within Routing Forms",
+          "url": "https://github.com/calcom/cal.diy/pull/22947",
+          "state": "Closed",
+          "created_at": "2025-08-07",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22936,
+          "title": "fix: fixed the estonian language on confirmation page",
+          "url": "https://github.com/calcom/cal.diy/pull/22936",
+          "state": "Merged",
+          "created_at": "2025-08-06",
+          "merged_at": "2025-08-06",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22896,
+          "title": "docs: refactor the v2 api README file",
+          "url": "https://github.com/calcom/cal.diy/pull/22896",
+          "state": "Merged",
+          "created_at": "2025-08-05",
+          "merged_at": "2025-08-08",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22843,
+          "title": "fix: add strict URL validation with consistent error message",
+          "url": "https://github.com/calcom/cal.diy/pull/22843",
+          "state": "Merged",
+          "created_at": "2025-07-31",
+          "merged_at": "2025-08-08",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22807,
+          "title": "fix: allow organizer/host to cancel/reschedule even when booking options are disabled",
+          "url": "https://github.com/calcom/cal.diy/pull/22807",
+          "state": "Closed",
+          "created_at": "2025-07-30",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22786,
+          "title": "fix: improve error messages for PayPal credential validation",
+          "url": "https://github.com/calcom/cal.diy/pull/22786",
+          "state": "Merged",
+          "created_at": "2025-07-29",
+          "merged_at": "2025-07-29",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22778,
+          "title": "fix: prevent external CSS from breaking Cal.com embed",
+          "url": "https://github.com/calcom/cal.diy/pull/22778",
+          "state": "Merged",
+          "created_at": "2025-07-28",
+          "merged_at": "2025-09-22",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22760,
+          "title": "fix: center-align timezone and edit availability button on mobile layout",
+          "url": "https://github.com/calcom/cal.diy/pull/22760",
+          "state": "Merged",
+          "created_at": "2025-07-27",
+          "merged_at": "2025-07-30",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22738,
+          "title": "fix(seed): prevent prisma seed failure by skipping duplicate team slug creation",
+          "url": "https://github.com/calcom/cal.diy/pull/22738",
+          "state": "Merged",
+          "created_at": "2025-07-25",
+          "merged_at": "2025-07-25",
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22556,
+          "title": "fix: ensure 'slug' is treated as string to satisfy typescript",
+          "url": "https://github.com/calcom/cal.diy/pull/22556",
+          "state": "Closed",
+          "created_at": "2025-07-16",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
+        {
+          "number": 22475,
+          "title": "fix: Use Memberships with OWNER role for platform owner lookup",
+          "url": "https://github.com/calcom/cal.diy/pull/22475",
+          "state": "Merged",
+          "created_at": "2025-07-14",
+          "merged_at": "2025-08-22",
+          "repo": "cal.diy"
+        }
+      ]
+    },
+    {
+      "name": "ruxailab",
+      "merged": 38,
+      "prs": [
+        {
+          "number": 1016,
+          "title": "fix(test): CI workflow failures by correcting Jest mocks and updating tests",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/1016",
+          "state": "Merged",
+          "created_at": "2025-12-01",
+          "merged_at": "2025-12-28",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 3,
+          "title": "Add Sahitya Chandra GSoC'25 project final report",
+          "url": "https://github.com/ruxailab/ruxailab-wiki/pull/3",
+          "state": "Merged",
+          "created_at": "2025-10-21",
+          "merged_at": "2025-10-21",
+          "repo": "ruxailab-wiki"
+        },
+        {
+          "number": 1001,
+          "title": "feat: Firebase storage usage calculation",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/1001",
+          "state": "Merged",
+          "created_at": "2025-10-14",
+          "merged_at": "2025-10-14",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 1000,
+          "title": "removed debug logs",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/1000",
+          "state": "Merged",
+          "created_at": "2025-10-08",
+          "merged_at": "2025-10-13",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 995,
+          "title": "Fix Internationalization strings",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/995",
+          "state": "Merged",
+          "created_at": "2025-10-06",
+          "merged_at": "2025-10-17",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 988,
+          "title": "feat: completed the next-session card on dashboard",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/988",
+          "state": "Merged",
+          "created_at": "2025-09-30",
+          "merged_at": "2025-10-03",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 983,
+          "title": "created loader using new RUXAILAB logo",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/983",
+          "state": "Merged",
+          "created_at": "2025-09-25",
+          "merged_at": "2025-09-25",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 981,
+          "title": "fix: image upload to storage while answering",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/981",
+          "state": "Merged",
+          "created_at": "2025-09-22",
+          "merged_at": "2025-09-22",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 979,
+          "title": "fix: Heuristics Fixes",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/979",
+          "state": "Merged",
+          "created_at": "2025-09-15",
+          "merged_at": "2025-09-15",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 964,
+          "title": "fix: improved TemplateInfoDialog in DashboardView and ProfileView",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/964",
+          "state": "Closed",
+          "created_at": "2025-08-07",
+          "merged_at": null,
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 963,
+          "title": "[GSoC'25]: UI layout Optimizations and Feature Enhancements for RUXAILAB (after Mid Term)",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/963",
+          "state": "Merged",
+          "created_at": "2025-08-07",
+          "merged_at": "2025-08-07",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 957,
+          "title": "chore: small null value check",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/957",
+          "state": "Merged",
+          "created_at": "2025-08-01",
+          "merged_at": "2025-08-04",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 953,
+          "title": "chore: removed deprecated imports and >>> usage",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/953",
+          "state": "Merged",
+          "created_at": "2025-07-24",
+          "merged_at": "2025-07-31",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 952,
+          "title": "fix: nasa-tlx answer object not being updated in task answers fixed",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/952",
+          "state": "Merged",
+          "created_at": "2025-07-22",
+          "merged_at": "2025-07-22",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 950,
+          "title": "fix: added MANUAL & AUTOMATIC testType in List and filter",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/950",
+          "state": "Merged",
+          "created_at": "2025-07-17",
+          "merged_at": "2025-07-17",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 949,
+          "title": "refactor: modified filter to filter List by study type instead of method",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/949",
+          "state": "Merged",
+          "created_at": "2025-07-17",
+          "merged_at": "2025-07-17",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 948,
+          "title": "[GSoC'25]: Major UI layout Optimizations(redesign) and Feature Enhancements for RUXAILAB",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/948",
+          "state": "Merged",
+          "created_at": "2025-07-15",
+          "merged_at": "2025-07-16",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 936,
+          "title": "rebase latest commits",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/936",
+          "state": "Merged",
+          "created_at": "2025-07-04",
+          "merged_at": "2025-07-04",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 935,
+          "title": "fix: fixed the cooperator view of moderated test",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/935",
+          "state": "Merged",
+          "created_at": "2025-07-04",
+          "merged_at": "2025-07-04",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 932,
+          "title": "fix: fixed the clicking of tasks and made consent checkbox horizontal",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/932",
+          "state": "Merged",
+          "created_at": "2025-07-01",
+          "merged_at": "2025-07-01",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 908,
+          "title": "fix: rebase develop on vue3-migration branch",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/908",
+          "state": "Merged",
+          "created_at": "2025-05-26",
+          "merged_at": "2025-05-26",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 886,
+          "title": "fix(user-test): text-fields are now empty after completing a task",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/886",
+          "state": "Merged",
+          "created_at": "2025-05-19",
+          "merged_at": "2025-05-19",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 871,
+          "title": "fix(user-test): Initialization error tooltip appearing when landing on UserTestView fixed",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/871",
+          "state": "Merged",
+          "created_at": "2025-05-17",
+          "merged_at": "2025-05-18",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 839,
+          "title": "[GSoC'25]: Migration of RUXAILAB codebase to Vue 3 (Completed)",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/839",
+          "state": "Merged",
+          "created_at": "2025-05-01",
+          "merged_at": "2025-05-26",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 832,
+          "title": "feat(user-test): Added validation checks and toast for successful and unsuccessful completion of task",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/832",
+          "state": "Merged",
+          "created_at": "2025-04-27",
+          "merged_at": "2025-05-05",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 830,
+          "title": "fix(user-testing): Added all the lost strings for Moderated Test",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/830",
+          "state": "Merged",
+          "created_at": "2025-04-26",
+          "merged_at": "2025-04-29",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 639,
+          "title": "Fixed the partial fetching of testsList in header dropdown and testTitle becomes invisible when dropdown is opened ",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/639",
+          "state": "Merged",
+          "created_at": "2025-03-07",
+          "merged_at": "2025-04-01",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 621,
+          "title": "Fixed the translation of Sessions heading in Dashboard.vue",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/621",
+          "state": "Merged",
+          "created_at": "2025-03-04",
+          "merged_at": "2025-03-07",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 613,
+          "title": "Added a global store to save current language and started using Localstorage to persist selected language.",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/613",
+          "state": "Merged",
+          "created_at": "2025-02-27",
+          "merged_at": "2025-04-01",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 604,
+          "title": "fix: Fixed rendering and navigation of all tests in DashboardView and added navigation to a test from sidedrawer also",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/604",
+          "state": "Closed",
+          "created_at": "2025-02-20",
+          "merged_at": null,
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 597,
+          "title": "Added all 4 language support to CreateBlankView and CreateTestNameDialog ",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/597",
+          "state": "Merged",
+          "created_at": "2025-02-16",
+          "merged_at": "2025-02-19",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 595,
+          "title": "feat: Updated ProfileView to use usercontroller and added the complete functionality to perform Backend operations",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/595",
+          "state": "Merged",
+          "created_at": "2025-02-13",
+          "merged_at": "2025-02-19",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 589,
+          "title": "fix: Updated the deprecated version of actions/checkout and actions/cache",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/589",
+          "state": "Merged",
+          "created_at": "2025-02-12",
+          "merged_at": "2025-02-12",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 584,
+          "title": "fix: Fixed the double import of updatePassword function causing the code to break",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/584",
+          "state": "Merged",
+          "created_at": "2025-02-10",
+          "merged_at": "2025-02-10",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 579,
+          "title": "feat(User): Improved User ProfileView UI/UX and made it responsive also",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/579",
+          "state": "Merged",
+          "created_at": "2025-02-08",
+          "merged_at": "2025-02-09",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 575,
+          "title": "fix: Configured webkit browser for playwright testing and updated CI pipeline to install webkit specifically",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/575",
+          "state": "Merged",
+          "created_at": "2025-02-07",
+          "merged_at": "2025-02-25",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 569,
+          "title": "Fixed the error related to expected CSS shorthand usage and added a generic font-family in src/components/molecules/Toolbar.vue",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/569",
+          "state": "Merged",
+          "created_at": "2025-02-04",
+          "merged_at": "2025-02-07",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 567,
+          "title": "Updated .gitignore file to ignore firestore-debug.log file",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/567",
+          "state": "Merged",
+          "created_at": "2025-02-04",
+          "merged_at": "2025-02-07",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 562,
+          "title": "fix: Save changes button added to save updated changes of a test",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/562",
+          "state": "Closed",
+          "created_at": "2025-02-02",
+          "merged_at": null,
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 559,
+          "title": "fix: Fixed the complete CI workflow for playwright-test and updated all actions to the latest version",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/559",
+          "state": "Merged",
+          "created_at": "2025-01-29",
+          "merged_at": "2025-02-04",
+          "repo": "RUXAILAB"
+        },
+        {
+          "number": 554,
+          "title": "fix: updated deprecated actions/upload-artifact@v2 to v4",
+          "url": "https://github.com/ruxailab/RUXAILAB/pull/554",
+          "state": "Merged",
+          "created_at": "2025-01-21",
+          "merged_at": "2025-01-23",
+          "repo": "RUXAILAB"
+        }
+      ]
+    },
+    {
+      "name": "kubernetes-sigs",
+      "merged": 3,
+      "prs": [
+        {
+          "number": 236,
+          "title": "fix: cleanup taints after node selector mismatch",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/236",
+          "state": "Open",
+          "created_at": "2026-05-10",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 218,
+          "title": "fix: skip NodeEvaluation upsert when evaluation did not run",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/218",
+          "state": "Open",
+          "created_at": "2026-05-06",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 214,
+          "title": "fix: trigger reconcile on rule deletion-timestamp updates",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/214",
+          "state": "Open",
+          "created_at": "2026-05-05",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 206,
+          "title": "fix: avoid double-counting bootstrap completion metric",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/206",
+          "state": "Merged",
+          "created_at": "2026-05-04",
+          "merged_at": "2026-05-05",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 194,
+          "title": "fix: retry lychee link check on transient upstream errors",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/194",
+          "state": "Merged",
+          "created_at": "2026-05-02",
+          "merged_at": "2026-05-02",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 193,
+          "title": "feat: add Effect and DryRun printcolumns to NodeReadinessRule",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/193",
+          "state": "Merged",
+          "created_at": "2026-05-02",
+          "merged_at": "2026-05-02",
+          "repo": "node-readiness-controller"
+        }
+      ]
+    },
+    {
+      "name": "kubernetes",
+      "merged": 0,
+      "prs": [
+        {
+          "number": 138900,
+          "title": "apimachinery: add selector overlap helper",
+          "url": "https://github.com/kubernetes/kubernetes/pull/138900",
+          "state": "Closed",
+          "created_at": "2026-05-08",
+          "merged_at": null,
+          "repo": "kubernetes"
+        },
+        {
+          "number": 9593,
+          "title": "chart(cluster-autoscaler): default serviceMonitor (metric)Relabelings to []",
+          "url": "https://github.com/kubernetes/autoscaler/pull/9593",
+          "state": "Open",
+          "created_at": "2026-05-05",
+          "merged_at": null,
+          "repo": "autoscaler"
+        },
+        {
+          "number": 138555,
+          "title": "drain: skip eviction retry when pod rescheduled to different node",
+          "url": "https://github.com/kubernetes/kubernetes/pull/138555",
+          "state": "Closed",
+          "created_at": "2026-04-23",
+          "merged_at": null,
+          "repo": "kubernetes"
+        }
+      ]
+    },
+    {
+      "name": "git",
+      "merged": 1,
+      "prs": [
+        {
+          "number": null,
+          "title": "[PATCH] pack-redundant: fix memory leak when open_pack_index() fails",
+          "url": "https://github.com/git/git/commit/7451864bfac0fc7ac829aceecd7f339b80dac732",
+          "state": "Merged",
+          "created_at": "2026-02-21",
+          "merged_at": "2026-02-21",
+          "repo": "git"
+        }
+      ]
+    },
+    {
+      "name": "lima-vm",
+      "merged": 2,
+      "prs": [
+        {
+          "number": 4924,
+          "title": "hostagent: wait for the guest agent before opening the inotify stream",
+          "url": "https://github.com/lima-vm/lima/pull/4924",
+          "state": "Merged",
+          "created_at": "2026-05-02",
+          "merged_at": "2026-05-09",
+          "repo": "lima"
+        },
+        {
+          "number": 4918,
+          "title": "pkg/store: treat unknown terminal width as unlimited in `limactl ls`",
+          "url": "https://github.com/lima-vm/lima/pull/4918",
+          "state": "Merged",
+          "created_at": "2026-05-01",
+          "merged_at": "2026-05-01",
+          "repo": "lima"
+        }
+      ]
+    },
+    {
+      "name": "kagent-dev",
+      "merged": 1,
+      "prs": [
+        {
+          "number": 1098,
+          "title": "feat(run): add --build flag to rebuild image before running",
+          "url": "https://github.com/kagent-dev/kagent/pull/1098",
+          "state": "Merged",
+          "created_at": "2025-11-08",
+          "merged_at": "2025-11-12",
+          "repo": "kagent"
+        }
+      ]
+    },
+    {
+      "name": "volcano-sh",
+      "merged": 0,
+      "prs": [
+        {
+          "number": 4858,
+          "title": "test: fix flaky TestAllocateWithPVC",
+          "url": "https://github.com/volcano-sh/volcano/pull/4858",
+          "state": "Open",
+          "created_at": "2025-12-22",
+          "merged_at": null,
+          "repo": "volcano"
+        },
+        {
+          "number": 4844,
+          "title": "refactor: use single queue for all workers in job controller",
+          "url": "https://github.com/volcano-sh/volcano/pull/4844",
+          "state": "Open",
+          "created_at": "2025-12-20",
+          "merged_at": null,
+          "repo": "volcano"
+        },
+        {
+          "number": 493,
+          "title": "chore: remove cert-manager from charts",
+          "url": "https://github.com/volcano-sh/kthena/pull/493",
+          "state": "Closed",
+          "created_at": "2025-11-17",
+          "merged_at": null,
+          "repo": "kthena"
+        }
+      ]
+    },
+    {
+      "name": "osdldbt",
+      "merged": 1,
+      "prs": [
+        {
+          "number": 32,
+          "title": "fix memory leak: free g_tid in Driver::runTest",
+          "url": "https://github.com/osdldbt/dbt5/pull/32",
+          "state": "Open",
+          "created_at": "2026-02-22",
+          "merged_at": null,
+          "repo": "dbt5"
+        },
+        {
+          "number": 30,
+          "title": "add --stored-proc-type to choose PL/pgSQL vs C when building DB",
+          "url": "https://github.com/osdldbt/dbt5/pull/30",
+          "state": "Open",
+          "created_at": "2026-02-09",
+          "merged_at": null,
+          "repo": "dbt5"
+        },
+        {
+          "number": 29,
+          "title": "add .gitignore entries for build artifacts and EGenLoader output",
+          "url": "https://github.com/osdldbt/dbt5/pull/29",
+          "state": "Merged (indirect)",
+          "created_at": "2026-02-08",
+          "merged_at": "2026-02-19",
+          "repo": "dbt5"
+        }
+      ]
+    },
+    {
+      "name": "pgmoneta",
+      "merged": 1,
+      "prs": [
+        {
+          "number": 97,
+          "title": "Fix early return in _translate_result dropping sibling fields after Backups array",
+          "url": "https://github.com/pgmoneta/pgmoneta_mcp/pull/97",
+          "state": "Merged (indirect)",
+          "created_at": "2026-04-11",
+          "merged_at": "2026-04-12",
+          "repo": "pgmoneta_mcp"
+        }
+      ]
+    },
+    {
+      "name": "anomalyco",
+      "merged": 0,
+      "prs": [
+        {
+          "number": 17618,
+          "title": "feat(formatters): add stylua, nimpretty, and elm-format formatters",
+          "url": "https://github.com/anomalyco/opencode/pull/17618",
+          "state": "Open",
+          "created_at": "2026-03-15",
+          "merged_at": null,
+          "repo": "opencode"
+        }
+      ]
+    },
+    {
+      "name": "InternetHealthReport",
+      "merged": 5,
+      "prs": [
+        {
+          "number": 919,
+          "title": "Disbaled Searchbar when map overlay is open",
+          "url": "https://github.com/InternetHealthReport/ihr-website/pull/919",
+          "state": "Merged",
+          "created_at": "2025-02-27",
+          "merged_at": "2025-02-27",
+          "repo": "ihr-website"
+        },
+        {
+          "number": 918,
+          "title": "Added trim function to remove leading or tailing white spaces in the searched term before searching",
+          "url": "https://github.com/InternetHealthReport/ihr-website/pull/918",
+          "state": "Merged",
+          "created_at": "2025-02-26",
+          "merged_at": "2025-02-27",
+          "repo": "ihr-website"
+        },
+        {
+          "number": 909,
+          "title": "fix: Fixed the hiding behavior of sidebar with footer in Documentation.vue",
+          "url": "https://github.com/InternetHealthReport/ihr-website/pull/909",
+          "state": "Merged",
+          "created_at": "2025-02-17",
+          "merged_at": "2025-02-19",
+          "repo": "ihr-website"
+        },
+        {
+          "number": 901,
+          "title": "Added color contrast to the active option in dropdown menu of navbar",
+          "url": "https://github.com/InternetHealthReport/ihr-website/pull/901",
+          "state": "Merged",
+          "created_at": "2025-02-14",
+          "merged_at": "2025-02-14",
+          "repo": "ihr-website"
+        },
+        {
+          "number": 892,
+          "title": "Improved the navbar design in mobile UI for enhanced User Experience",
+          "url": "https://github.com/InternetHealthReport/ihr-website/pull/892",
+          "state": "Merged",
+          "created_at": "2025-02-04",
+          "merged_at": "2025-02-05",
+          "repo": "ihr-website"
+        }
+      ]
+    },
+    {
+      "name": "middlewarehq",
+      "merged": 3,
+      "prs": [
+        {
+          "number": 648,
+          "title": "feature: Added FGTs support in github integration",
+          "url": "https://github.com/middlewarehq/middleware/pull/648",
+          "state": "Closed",
+          "created_at": "2025-04-22",
+          "merged_at": null,
+          "repo": "middleware"
+        },
+        {
+          "number": 642,
+          "title": "Migrated from Clearbit to logo.dev",
+          "url": "https://github.com/middlewarehq/middleware/pull/642",
+          "state": "Merged",
+          "created_at": "2025-04-08",
+          "merged_at": "2025-04-08",
+          "repo": "middleware"
+        },
+        {
+          "number": 602,
+          "title": "Node, Yarn and Docker version check added in dev.sh file",
+          "url": "https://github.com/middlewarehq/middleware/pull/602",
+          "state": "Merged",
+          "created_at": "2024-10-16",
+          "merged_at": "2024-10-17",
+          "repo": "middleware"
+        },
+        {
+          "number": 589,
+          "title": "pre-requisite dependency(node or yarn) version check added in dev.sh file",
+          "url": "https://github.com/middlewarehq/middleware/pull/589",
+          "state": "Closed",
+          "created_at": "2024-10-12",
+          "merged_at": null,
+          "repo": "middleware"
+        },
+        {
+          "number": 586,
+          "title": "Response and Commit to open fields position swaped in LT table",
+          "url": "https://github.com/middlewarehq/middleware/pull/586",
+          "state": "Merged",
+          "created_at": "2024-10-10",
+          "merged_at": "2024-10-10",
+          "repo": "middleware"
+        }
+      ]
+    },
+    {
+      "name": "excalidraw",
+      "merged": 0,
+      "prs": [
+        {
+          "number": 8609,
+          "title": "Fix: Overlap of child element with already existing preset of childs in Flowchart",
+          "url": "https://github.com/excalidraw/excalidraw/pull/8609",
+          "state": "Closed",
+          "created_at": "2024-10-08",
+          "merged_at": null,
+          "repo": "excalidraw"
+        }
+      ]
+    }
+  ]
+}

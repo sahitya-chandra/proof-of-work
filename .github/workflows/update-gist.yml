@@ -1,12 +1,15 @@
-name: Update contributions gist
+name: Refresh contributions
 
 on:
   schedule:
     - cron: '0 0 * * 0'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  update-gist:
+  refresh:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -16,7 +19,18 @@ jobs:
           python-version: '3.10'
       - name: Install dependencies
         run: pip install PyGithub python-dotenv
-      - name: Update gist
+      - name: Update gist and regenerate site data
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
         run: python create_gist.py
+      - name: Commit refreshed docs/data.json
+        run: |
+          if [ -n "$(git status --porcelain docs/data.json)" ]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add docs/data.json
+            git commit -m "chore: refresh contributions data"
+            git push
+          else
+            echo "No changes to docs/data.json"
+          fi

@@ -1,8 +1,9 @@
 from github import Github, Auth, InputFileContent
 from dotenv import load_dotenv
 import os
+import json
 from collections import defaultdict
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 load_dotenv()
 
@@ -30,6 +31,42 @@ EXCLUDE_ORGS = {
     "dubinc",
     "json-schema-org",
     "mrhashcoder",
+}
+
+# Display order. Orgs not in this list are dropped from the site/gist.
+ORG_ORDER = [
+    "calcom",
+    "ruxailab",
+    "kubernetes-sigs",
+    "kubernetes",
+    "git",
+    "lima-vm",
+    "kubeescape",
+    "kagent-dev",
+    "volcano-sh",
+    "binodiwal",
+    "osdldbt",
+    "pgmoneta",
+    "anomalyco",
+    "InternetHealthReport",
+    "middlewarehq",
+    "excalidraw",
+]
+
+# Manual entries for non-GitHub contributions (e.g. git patches via lore.kernel.org).
+# Add more dicts to the "git" list for additional patches.
+MANUAL_ORG_ENTRIES = {
+    "git": [
+        {
+            "title": "[PATCH] pack-redundant: fix memory leak when open_pack_index() fails",
+            "url": "https://github.com/git/git/commit/7451864bfac0fc7ac829aceecd7f339b80dac732",
+            "state": "Merged",
+            "created_at": "2026-02-21",
+            "merged_at": "2026-02-21",
+            "number": None,
+            "repo": "git",
+        },
+    ],
 }
 
 print(f"Search query: {query}")
@@ -104,7 +141,22 @@ for pr in prs:
     except Exception as e:
         print(f"  [!] Error on {pr.repository.full_name} #{pr.number}: {e}")
 
-print(f"\nFetched: {total_fetched} | Included: {total_included}")
+print(f"\nFetched: {total_fetched} | Included (before manual + filter): {total_included}")
+
+# Merge manual (non-GitHub) entries
+for org_name, entries in MANUAL_ORG_ENTRIES.items():
+    for entry in entries:
+        prs_by_org[org_name].append(entry)
+        print(f"  [m] manual {org_name} :: {entry['title']}")
+
+# Whitelist: keep only orgs in ORG_ORDER
+dropped = [o for o in prs_by_org if o not in ORG_ORDER]
+for o in dropped:
+    print(f"  [x] dropped (not in ORG_ORDER) {o} ({len(prs_by_org[o])} PRs)")
+prs_by_org = defaultdict(list, {k: v for k, v in prs_by_org.items() if k in ORG_ORDER})
+
+total_included = sum(len(v) for v in prs_by_org.values())
+print(f"After manual + whitelist: {total_included} entries across {len(prs_by_org)} orgs")
 
 # ── Build gist markdown ────────────────────────────────────────────────────────
 
@@ -126,10 +178,8 @@ lines.append("")
 lines.append(f"**{total_included} PRs** — {total_merged} Merged · {total_open} Open · {total_closed} Closed")
 lines.append("")
 
-# Cal.com first — primary org
-priority_orgs = ["calcom"]
-other_orgs = sorted(o for o in prs_by_org if o not in priority_orgs)
-ordered_orgs = [o for o in priority_orgs if o in prs_by_org] + other_orgs
+# Follow the explicit ORG_ORDER (already filtered to whitelist above)
+ordered_orgs = [o for o in ORG_ORDER if o in prs_by_org]
 
 for org in ordered_orgs:
     prs_list = sorted(prs_by_org[org], key=lambda x: x["created_at"], reverse=True)
@@ -164,3 +214,44 @@ gist.edit(
 )
 
 print(f"\nGist updated: {gist.html_url}")
+
+# ── Write docs/data.json for the github.io page ───────────────────────────────
+
+site_orgs = []
+for org in ordered_orgs:
+    prs_list = sorted(prs_by_org[org], key=lambda x: x["created_at"], reverse=True)
+    merged_count = sum(1 for p in prs_list if p["state"] in ("Merged", "Merged (indirect)"))
+    site_orgs.append({
+        "name": org,
+        "merged": merged_count,
+        "prs": [
+            {
+                "number": p["number"],
+                "title": p["title"],
+                "url": p["url"],
+                "state": p["state"],
+                "created_at": p["created_at"],
+                "merged_at": p["merged_at"],
+                "repo": p["repo"],
+            }
+            for p in prs_list
+        ],
+    })
+
+site_data = {
+    "username": username,
+    "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
+    "totals": {
+        "prs": total_included,
+        "merged": total_merged,
+        "open": total_open,
+        "closed": total_closed,
+    },
+    "orgs": site_orgs,
+}
+
+docs_path = os.path.join(os.path.dirname(__file__), "docs", "data.json")
+os.makedirs(os.path.dirname(docs_path), exist_ok=True)
+with open(docs_path, "w", encoding="utf-8") as f:
+    json.dump(site_data, f, indent=2, ensure_ascii=False)
+print(f"Wrote site data: {docs_path}")
