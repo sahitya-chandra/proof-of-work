@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-05-12 09:29 UTC",
+  "generated_at": "2026-05-13 02:16 UTC",
   "totals": {
     "prs": 119,
     "merged": 87,
-    "open": 12,
-    "closed": 20
+    "open": 11,
+    "closed": 21
   },
   "orgs": [
     {
@@ -829,7 +829,7 @@
           "number": 214,
           "title": "fix: trigger reconcile on rule deletion-timestamp updates",
           "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/214",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-05-05",
           "merged_at": null,
           "repo": "node-readiness-controller"
