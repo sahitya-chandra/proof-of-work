@@ -1,10 +1,10 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-05-13 02:16 UTC",
+  "generated_at": "2026-05-14 02:17 UTC",
   "totals": {
-    "prs": 119,
+    "prs": 120,
     "merged": 87,
-    "open": 11,
+    "open": 12,
     "closed": 21
   },
   "orgs": [
@@ -807,6 +807,15 @@
       "name": "kubernetes-sigs",
       "merged": 3,
       "prs": [
+        {
+          "number": 246,
+          "title": "webhook: detect matchExpression selector overlaps",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/246",
+          "state": "Open",
+          "created_at": "2026-05-13",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
         {
           "number": 236,
           "title": "fix: cleanup taints after node selector mismatch",
