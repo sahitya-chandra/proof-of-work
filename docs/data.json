@@ -1,9 +1,9 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-05-26 02:18 UTC",
+  "generated_at": "2026-05-27 02:37 UTC",
   "totals": {
-    "prs": 122,
-    "merged": 90,
+    "prs": 123,
+    "merged": 91,
     "open": 10,
     "closed": 22
   },
@@ -805,8 +805,17 @@
     },
     {
       "name": "kubernetes-sigs",
-      "merged": 6,
+      "merged": 7,
       "prs": [
+        {
+          "number": 266,
+          "title": "cleanup: remove duplicate KIND_CLUSTER definition in Makefile",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/266",
+          "state": "Merged",
+          "created_at": "2026-05-26",
+          "merged_at": "2026-05-26",
+          "repo": "node-readiness-controller"
+        },
         {
           "number": 264,
           "title": "fix: resolve lint failures from dead code cleanup",
