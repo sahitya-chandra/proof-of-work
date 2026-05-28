@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-05-27 02:37 UTC",
+  "generated_at": "2026-05-28 02:14 UTC",
   "totals": {
     "prs": 123,
     "merged": 91,
-    "open": 10,
-    "closed": 22
+    "open": 9,
+    "closed": 23
   },
   "orgs": [
     {
@@ -16,7 +16,7 @@
           "number": 28967,
           "title": "fix: push Docker images to calcom/cal.com instead of calcom/cal.diy",
           "url": "https://github.com/calcom/cal.diy/pull/28967",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-04-22",
           "merged_at": null,
           "repo": "cal.diy"
