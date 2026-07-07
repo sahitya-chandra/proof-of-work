@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-07-06 02:16 UTC",
+  "generated_at": "2026-07-07 02:11 UTC",
   "totals": {
     "prs": 123,
     "merged": 91,
-    "open": 9,
-    "closed": 23
+    "open": 7,
+    "closed": 25
   },
   "orgs": [
     {
@@ -1027,7 +1027,7 @@
           "number": 32,
           "title": "fix memory leak: free g_tid in Driver::runTest",
           "url": "https://github.com/osdldbt/dbt5/pull/32",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-02-22",
           "merged_at": null,
           "repo": "dbt5"
@@ -1036,7 +1036,7 @@
           "number": 30,
           "title": "add --stored-proc-type to choose PL/pgSQL vs C when building DB",
           "url": "https://github.com/osdldbt/dbt5/pull/30",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-02-09",
           "merged_at": null,
           "repo": "dbt5"
