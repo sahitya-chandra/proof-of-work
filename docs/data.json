@@ -1,10 +1,10 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-07-30 01:32 UTC",
+  "generated_at": "2026-07-31 01:58 UTC",
   "totals": {
-    "prs": 123,
+    "prs": 124,
     "merged": 91,
-    "open": 6,
+    "open": 7,
     "closed": 26
   },
   "orgs": [
@@ -807,6 +807,15 @@
       "name": "kubernetes-sigs",
       "merged": 7,
       "prs": [
+        {
+          "number": 77,
+          "title": "test: add CardinalityTracker unit tests",
+          "url": "https://github.com/kubernetes-sigs/resource-state-metrics/pull/77",
+          "state": "Open",
+          "created_at": "2026-07-30",
+          "merged_at": null,
+          "repo": "resource-state-metrics"
+        },
         {
           "number": 266,
           "title": "cleanup: remove duplicate KIND_CLUSTER definition in Makefile",
