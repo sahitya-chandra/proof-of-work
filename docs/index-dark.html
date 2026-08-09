@@ -151,9 +151,34 @@
     .prs { display: none; border-top: 1px solid var(--border-soft); }
     .org.open .prs { display: block; }
 
+    .project {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 10px 18px 8px 44px;
+      color: var(--accent);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px solid var(--border-soft);
+    }
+    .project-name {
+      flex: 1;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .project-meta {
+      color: var(--fg-faint);
+      font-size: 0.74rem;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
     .pr {
       display: grid;
-      grid-template-columns: 80px 1fr auto;
+      grid-template-columns: 92px 1fr auto;
       gap: 16px;
       align-items: baseline;
       padding: 10px 18px 10px 44px;
@@ -181,6 +206,13 @@
     }
     .pr-title a:hover { color: var(--accent-2); }
     .pr-num { color: var(--fg-faint); margin-right: 6px; font-family: 'JetBrains Mono', monospace; }
+    .pr-summary {
+      display: block;
+      margin-top: 5px;
+      color: var(--fg-dim);
+      font-size: 0.82rem;
+      line-height: 1.5;
+    }
     .pr-date { color: var(--fg-faint); font-size: 0.78rem; font-family: 'JetBrains Mono', monospace; white-space: nowrap; }
 
     footer {
@@ -194,7 +226,8 @@
 
     @media (max-width: 600px) {
       main { padding: 28px 16px 64px; }
-      .pr { grid-template-columns: 70px 1fr; padding-left: 24px; }
+      .pr { grid-template-columns: 84px 1fr; padding-left: 24px; }
+      .project { padding-left: 24px; }
       .pr-date { grid-column: 2; }
     }
   </style>
@@ -249,7 +282,7 @@
     }).filter(org => org.visible.length > 0);
 
     if (orgs.length === 0) {
-      list.innerHTML = '<div style="color: var(--fg-faint); padding: 16px;">No entries match this filter.</div>';
+      list.innerHTML = '<div style="color: var(--fg-faint); padding: 16px;">No contributions match this filter.</div>';
       return;
     }
 
@@ -263,23 +296,38 @@
         <span class="chev">▶</span>
         <img class="org-logo" alt="" src="https://github.com/${org.name}.png?size=64" onerror="this.style.visibility='hidden'">
         <span class="org-name">${escapeHtml(org.name)}</span>
-        <span class="org-meta"><b>${org.visible.length}</b> ${org.visible.length === 1 ? "PR" : "PRs"}<span class="pill">${org.merged} merged</span></span>
+        <span class="org-meta"><b>${org.visible.length}</b> ${orgLabel(org, org.visible.length)}<span class="pill">${org.merged} merged</span></span>
       `;
 
       const prs = document.createElement("div");
       prs.className = "prs";
-      org.visible.forEach(pr => {
-        const row = document.createElement("div");
-        row.className = "pr";
-        const label = STATE_LABEL[pr.state] || "open";
-        const date = pr.merged_at || pr.created_at;
-        const display = label === "merged" && pr.state.includes("indirect") ? "merged*" : label;
-        row.innerHTML = `
-          <span class="pr-status ${label}">${display}</span>
-          <span class="pr-title">${pr.number ? `<span class="pr-num">#${pr.number}</span>` : ""}<a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a></span>
-          <span class="pr-date">${date || ""}</span>
-        `;
-        prs.appendChild(row);
+      const groups = org.group_by === "repo" ? groupByRepo(org.visible) : [{ name: null, contributions: org.visible }];
+      groups.forEach(group => {
+        if (group.name) {
+          const project = document.createElement("div");
+          project.className = "project";
+          const merged = group.contributions.filter(pr => STATE_LABEL[pr.state] === "merged").length;
+          project.innerHTML = `
+            <span class="project-name">${escapeHtml(group.name)}</span>
+            <span class="project-meta">${group.contributions.length} ${contributionLabel(group.contributions.length)} · ${merged} merged</span>
+          `;
+          prs.appendChild(project);
+        }
+
+        group.contributions.forEach(pr => {
+          const row = document.createElement("div");
+          row.className = "pr";
+          const label = STATE_LABEL[pr.state] || "open";
+          const date = pr.merged_at || pr.created_at;
+          const display = pr.status_label || (label === "merged" && pr.state.includes("indirect") ? "merged*" : label);
+          const summary = pr.summary ? `<span class="pr-summary">${escapeHtml(pr.summary)}</span>` : "";
+          row.innerHTML = `
+            <span class="pr-status ${label}">${escapeHtml(display)}</span>
+            <span class="pr-title">${pr.number ? `<span class="pr-num">#${pr.number}</span>` : ""}<a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a>${summary}</span>
+            <span class="pr-date">${date || ""}</span>
+          `;
+          prs.appendChild(row);
+        });
       });
 
       header.onclick = () => card.classList.toggle("open");
@@ -300,6 +348,33 @@
     `;
     if (data.generated_at) document.getElementById("generated").textContent = "Generated " + data.generated_at;
     if (data.username) document.getElementById("user").textContent = data.username;
+  }
+
+  function groupByRepo(contributions) {
+    const groups = [];
+    const byRepo = new Map();
+    contributions.forEach(contribution => {
+      const name = contribution.repo || "other";
+      if (!byRepo.has(name)) {
+        const group = { name, contributions: [] };
+        byRepo.set(name, group);
+        groups.push(group);
+      }
+      byRepo.get(name).contributions.push(contribution);
+    });
+    return groups;
+  }
+
+  function orgLabel(org, count) {
+    return org.name === "git" ? plural(count, "patch", "patches") : contributionLabel(count);
+  }
+
+  function contributionLabel(count) {
+    return plural(count, "contribution", "contributions");
+  }
+
+  function plural(count, one, many) {
+    return count === 1 ? one : many;
   }
 
   function escapeHtml(s) {

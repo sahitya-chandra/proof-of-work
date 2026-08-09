@@ -166,6 +166,7 @@
     .toggle {
       color: var(--accent);
       width: 18px;
+      margin-right: 4px;
       display: inline-block;
       text-align: center;
       font-weight: 700;
@@ -176,9 +177,10 @@
       height: 22px;
       border-radius: 3px;
       object-fit: cover;
-      filter: grayscale(1) contrast(1.1) brightness(1.15);
-      opacity: 0.85;
+      opacity: 1;
       background: #000;
+      position: relative;
+      z-index: 1;
     }
 
     .org-name {
@@ -203,9 +205,33 @@
     .org.open .toggle::before { content: "[-]"; }
     .org:not(.open) .toggle::before { content: "[+]"; }
 
+    .project {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      padding: 10px 16px 7px 46px;
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-bottom: 1px dotted rgba(0, 102, 61, 0.4);
+    }
+    .project-name {
+      flex: 1;
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    .project-meta {
+      color: var(--fg-faint);
+      font-size: 0.74rem;
+      text-transform: none;
+      letter-spacing: 0;
+      white-space: nowrap;
+    }
+
     .pr {
       display: grid;
-      grid-template-columns: 70px 1fr auto;
+      grid-template-columns: 86px 1fr auto;
       gap: 14px;
       align-items: baseline;
       padding: 8px 16px 8px 46px;
@@ -234,6 +260,13 @@
       border-bottom-color: var(--fg-dim);
     }
     .pr-num { color: var(--fg-faint); margin-right: 6px; }
+    .pr-summary {
+      display: block;
+      margin-top: 4px;
+      color: var(--fg-dim);
+      font-size: 0.78rem;
+      line-height: 1.5;
+    }
 
     .pr-date {
       color: var(--fg-faint);
@@ -255,34 +288,27 @@
     footer a { color: var(--fg-dim); text-decoration: none; }
     footer a:hover { color: var(--fg); text-shadow: 0 0 4px rgba(0, 255, 159, 0.5); }
 
-    .switch {
-      display: flex;
-      gap: 6px;
-      font-size: 0.78rem;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-      font-family: inherit;
-    }
-    .switch a {
-      color: var(--fg-faint);
+    .user-link {
+      color: var(--fg);
       text-decoration: none;
-      padding: 4px 10px;
-      border: 1px solid var(--border);
-      transition: all 0.15s;
+      border-bottom: 1px dotted var(--fg-dim);
     }
-    .switch a:hover { color: var(--fg); border-color: var(--fg-dim); }
-    .switch a.current {
-      color: var(--bg);
-      background: var(--fg);
-      border-color: var(--fg);
+    .user-link:hover {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+      text-shadow: 0 0 6px rgba(255, 176, 0, 0.45);
     }
 
     @media (max-width: 600px) {
       main { padding: 28px 16px 64px; }
       pre.ascii { font-size: 9px; }
       .pr {
-        grid-template-columns: 60px 1fr;
+        grid-template-columns: 82px 1fr;
         padding-left: 26px;
+      }
+      .project {
+        padding-left: 26px;
+        padding-right: 16px;
       }
       .pr-date { grid-column: 2; color: var(--fg-faint); }
     }
@@ -290,12 +316,6 @@
 </head>
 <body>
 <main>
-  <nav class="switch">
-    <a href="index.html" class="current">terminal</a>
-    <a href="index-dark.html">dark</a>
-    <a href="index-paper.html">paper</a>
-    <a href="index-warm.html">sunset</a>
-  </nav>
   <pre class="ascii" aria-hidden="true" style="font-size: 8px;">
 ██████╗ ██████╗  ██████╗  ██████╗ ███████╗     ██████╗ ███████╗    ██╗    ██╗ ██████╗ ██████╗ ██╗  ██╗
 ██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗██╔════╝    ██╔═══██╗██╔════╝    ██║    ██║██╔═══██╗██╔══██╗██║ ██╔╝
@@ -306,7 +326,7 @@
   </pre>
 
   <div class="prompt-block">
-    <div class="line"><span class="prompt">&gt;</span> whoami<span class="muted">: </span><span id="user">sahitya-chandra</span></div>
+    <div class="line"><span class="prompt">&gt;</span> whoami<span class="muted">: </span><a id="user" class="user-link" href="https://github.com/sahitya-chandra" target="_blank" rel="noopener">sahitya-chandra</a></div>
     <div class="line"><span class="prompt">&gt;</span> cat contributions.log<span class="cursor"></span></div>
   </div>
 
@@ -357,7 +377,7 @@
     }).filter(org => org.visible.length > 0);
 
     if (orgs.length === 0) {
-      list.innerHTML = '<div style="color: var(--fg-faint); padding: 16px;">// no entries match filter</div>';
+      list.innerHTML = '<div style="color: var(--fg-faint); padding: 16px;">// no contributions match filter</div>';
       return;
     }
 
@@ -372,7 +392,7 @@
         <img class="org-logo" alt="" src="https://github.com/${org.name}.png?size=64" onerror="this.style.visibility='hidden'">
         <span class="org-name">${escapeHtml(org.name)}</span>
         <span class="org-meta">
-          <b>${org.visible.length}</b> ${org.visible.length === 1 ? "PR" : "PRs"}
+          <b>${org.visible.length}</b> ${orgLabel(org, org.visible.length)}
           <span class="sep">·</span>
           <span style="color: var(--merged)">${org.merged} merged</span>
         </span>
@@ -381,19 +401,36 @@
       const prs = document.createElement("div");
       prs.className = "prs";
 
-      org.visible.forEach(pr => {
-        const row = document.createElement("div");
-        row.className = "pr";
-        const label = STATE_LABEL[pr.state] || "open";
-        const date = pr.merged_at || pr.created_at;
-        row.innerHTML = `
-          <span class="pr-status ${label}">${label === "merged" && pr.state.includes("indirect") ? "merged*" : label}</span>
-          <span class="pr-title">
-            ${pr.number ? `<span class="pr-num">#${pr.number}</span>` : ""}<a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a>
-          </span>
-          <span class="pr-date">${date || ""}</span>
-        `;
-        prs.appendChild(row);
+      const groups = org.group_by === "repo" ? groupByRepo(org.visible) : [{ name: null, contributions: org.visible }];
+      groups.forEach(group => {
+        if (group.name) {
+          const project = document.createElement("div");
+          project.className = "project";
+          const merged = group.contributions.filter(pr => STATE_LABEL[pr.state] === "merged").length;
+          project.innerHTML = `
+            <span class="project-name">${escapeHtml(group.name)}</span>
+            <span class="project-meta">${group.contributions.length} ${contributionLabel(group.contributions.length)} · ${merged} merged</span>
+          `;
+          prs.appendChild(project);
+        }
+
+        group.contributions.forEach(pr => {
+          const row = document.createElement("div");
+          row.className = "pr";
+          const label = STATE_LABEL[pr.state] || "open";
+          const date = pr.merged_at || pr.created_at;
+          const display = pr.status_label || (label === "merged" && pr.state.includes("indirect") ? "merged*" : label);
+          const summary = pr.summary ? `<span class="pr-summary">${escapeHtml(pr.summary)}</span>` : "";
+          row.innerHTML = `
+            <span class="pr-status ${label}">${escapeHtml(display)}</span>
+            <span class="pr-title">
+              ${pr.number ? `<span class="pr-num">#${pr.number}</span>` : ""}<a href="${pr.url}" target="_blank" rel="noopener">${escapeHtml(pr.title)}</a>
+              ${summary}
+            </span>
+            <span class="pr-date">${date || ""}</span>
+          `;
+          prs.appendChild(row);
+        });
       });
 
       header.onclick = () => card.classList.toggle("open");
@@ -419,6 +456,33 @@
     if (data.username) {
       document.getElementById("user").textContent = data.username;
     }
+  }
+
+  function groupByRepo(contributions) {
+    const groups = [];
+    const byRepo = new Map();
+    contributions.forEach(contribution => {
+      const name = contribution.repo || "other";
+      if (!byRepo.has(name)) {
+        const group = { name, contributions: [] };
+        byRepo.set(name, group);
+        groups.push(group);
+      }
+      byRepo.get(name).contributions.push(contribution);
+    });
+    return groups;
+  }
+
+  function orgLabel(org, count) {
+    return org.name === "git" ? plural(count, "patch", "patches") : contributionLabel(count);
+  }
+
+  function contributionLabel(count) {
+    return plural(count, "contribution", "contributions");
+  }
+
+  function plural(count, one, many) {
+    return count === 1 ? one : many;
   }
 
   function escapeHtml(s) {

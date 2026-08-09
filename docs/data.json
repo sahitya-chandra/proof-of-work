@@ -1,13 +1,242 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-08-08 00:58 UTC",
+  "generated_at": "2026-08-09 12:54 UTC",
   "totals": {
-    "prs": 124,
-    "merged": 91,
-    "open": 7,
-    "closed": 26
+    "prs": 112,
+    "merged": 85,
+    "open": 10,
+    "closed": 17
   },
   "orgs": [
+    {
+      "name": "git",
+      "merged": 2,
+      "prs": [
+        {
+          "number": null,
+          "title": "wt-status: avoid quadratic insertion for untracked paths",
+          "url": "https://lore.kernel.org/git/20260716185045.229320-1-sahityajb@gmail.com/",
+          "state": "Merged",
+          "status_label": "accepted",
+          "created_at": "2026-07-16",
+          "merged_at": "2026-07-16",
+          "repo": "git.git",
+          "summary": "Reduced status untracked path collection from O(n^2) to O(n log n) by replacing repeated sorted insertions with a single append-and-sort pass."
+        },
+        {
+          "number": null,
+          "title": "read-cache: avoid sparse-index expansion on unborn branches",
+          "url": "https://lore.kernel.org/git/20260802212826.1090943-1-sahityajb@gmail.com/",
+          "state": "Open",
+          "status_label": "review",
+          "created_at": "2026-08-02",
+          "merged_at": null,
+          "repo": "git.git",
+          "summary": "Eliminates unnecessary sparse-index expansion on unborn branches by comparing the index against the empty tree instead of falling back to a full index walk. Added test coverage for nested directory paths without performance degradation."
+        },
+        {
+          "number": null,
+          "title": "[PATCH] pack-redundant: fix memory leak when open_pack_index() fails",
+          "url": "https://lore.kernel.org/git/20260221103900.41740-1-sahityajb@gmail.com/",
+          "state": "Merged",
+          "status_label": "accepted",
+          "created_at": "2026-02-21",
+          "merged_at": "2026-02-21",
+          "repo": "git.git",
+          "summary": "Fixes a memory leak in add_pack() when open_pack_index() fails."
+        }
+      ]
+    },
+    {
+      "name": "prometheus",
+      "merged": 3,
+      "prs": [
+        {
+          "number": 19164,
+          "title": "promql: add positioned annotations in promqltest",
+          "url": "https://github.com/prometheus/prometheus/pull/19164",
+          "state": "Merged",
+          "created_at": "2026-07-10",
+          "merged_at": "2026-08-04",
+          "repo": "prometheus"
+        },
+        {
+          "number": 19106,
+          "title": "storage/remote/azuread: run token provider tests in parallel",
+          "url": "https://github.com/prometheus/prometheus/pull/19106",
+          "state": "Merged",
+          "created_at": "2026-07-06",
+          "merged_at": "2026-07-07",
+          "repo": "prometheus"
+        },
+        {
+          "number": 19105,
+          "title": "discovery: run tests in parallel",
+          "url": "https://github.com/prometheus/prometheus/pull/19105",
+          "state": "Merged",
+          "created_at": "2026-07-06",
+          "merged_at": "2026-07-07",
+          "repo": "prometheus"
+        },
+        {
+          "number": 19099,
+          "title": "web/api/v1: parallelize TestApiStatusCodes subtests",
+          "url": "https://github.com/prometheus/prometheus/pull/19099",
+          "state": "Open",
+          "created_at": "2026-07-04",
+          "merged_at": null,
+          "repo": "prometheus"
+        }
+      ]
+    },
+    {
+      "name": "kubernetes-sigs",
+      "merged": 7,
+      "prs": [
+        {
+          "number": 14039,
+          "title": "🐛 Handle goproxy polling errors",
+          "url": "https://github.com/kubernetes-sigs/cluster-api/pull/14039",
+          "state": "Open",
+          "created_at": "2026-08-08",
+          "merged_at": null,
+          "repo": "cluster-api"
+        },
+        {
+          "number": 77,
+          "title": "test: add CardinalityTracker unit tests",
+          "url": "https://github.com/kubernetes-sigs/resource-state-metrics/pull/77",
+          "state": "Open",
+          "created_at": "2026-07-30",
+          "merged_at": null,
+          "repo": "resource-state-metrics"
+        },
+        {
+          "number": 266,
+          "title": "cleanup: remove duplicate KIND_CLUSTER definition in Makefile",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/266",
+          "state": "Merged",
+          "created_at": "2026-05-26",
+          "merged_at": "2026-05-26",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 264,
+          "title": "fix: resolve lint failures from dead code cleanup",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/264",
+          "state": "Merged",
+          "created_at": "2026-05-21",
+          "merged_at": "2026-05-21",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 256,
+          "title": "fix: pass NodeList to processAllNodesForRule in tests",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/256",
+          "state": "Merged",
+          "created_at": "2026-05-15",
+          "merged_at": "2026-05-15",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 246,
+          "title": "webhook: detect matchExpression selector overlaps",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/246",
+          "state": "Merged",
+          "created_at": "2026-05-13",
+          "merged_at": "2026-05-20",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 236,
+          "title": "fix: cleanup taints after node selector mismatch",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/236",
+          "state": "Open",
+          "created_at": "2026-05-10",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 218,
+          "title": "fix: skip NodeEvaluation upsert when evaluation did not run",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/218",
+          "state": "Open",
+          "created_at": "2026-05-06",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 214,
+          "title": "fix: trigger reconcile on rule deletion-timestamp updates",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/214",
+          "state": "Closed",
+          "created_at": "2026-05-05",
+          "merged_at": null,
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 206,
+          "title": "fix: avoid double-counting bootstrap completion metric",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/206",
+          "state": "Merged",
+          "created_at": "2026-05-04",
+          "merged_at": "2026-05-05",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 193,
+          "title": "feat: add Effect and DryRun printcolumns to NodeReadinessRule",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/193",
+          "state": "Merged",
+          "created_at": "2026-05-02",
+          "merged_at": "2026-05-02",
+          "repo": "node-readiness-controller"
+        },
+        {
+          "number": 194,
+          "title": "fix: retry lychee link check on transient upstream errors",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/194",
+          "state": "Merged",
+          "created_at": "2026-05-02",
+          "merged_at": "2026-05-02",
+          "repo": "node-readiness-controller"
+        }
+      ],
+      "group_by": "repo"
+    },
+    {
+      "name": "kubernetes",
+      "merged": 0,
+      "prs": [
+        {
+          "number": 138900,
+          "title": "apimachinery: add selector overlap helper",
+          "url": "https://github.com/kubernetes/kubernetes/pull/138900",
+          "state": "Closed",
+          "created_at": "2026-05-08",
+          "merged_at": null,
+          "repo": "kubernetes"
+        },
+        {
+          "number": 9593,
+          "title": "chart(cluster-autoscaler): default serviceMonitor (metric)Relabelings to []",
+          "url": "https://github.com/kubernetes/autoscaler/pull/9593",
+          "state": "Open",
+          "created_at": "2026-05-05",
+          "merged_at": null,
+          "repo": "autoscaler"
+        },
+        {
+          "number": 138555,
+          "title": "drain: skip eviction retry when pod rescheduled to different node",
+          "url": "https://github.com/kubernetes/kubernetes/pull/138555",
+          "state": "Closed",
+          "created_at": "2026-04-23",
+          "merged_at": null,
+          "repo": "kubernetes"
+        }
+      ]
+    },
     {
       "name": "calcom",
       "merged": 32,
@@ -16,7 +245,7 @@
           "number": 28967,
           "title": "fix: push Docker images to calcom/cal.com instead of calcom/cal.diy",
           "url": "https://github.com/calcom/cal.diy/pull/28967",
-          "state": "Closed",
+          "state": "Open",
           "created_at": "2026-04-22",
           "merged_at": null,
           "repo": "cal.diy"
@@ -804,159 +1033,6 @@
       ]
     },
     {
-      "name": "kubernetes-sigs",
-      "merged": 7,
-      "prs": [
-        {
-          "number": 77,
-          "title": "test: add CardinalityTracker unit tests",
-          "url": "https://github.com/kubernetes-sigs/resource-state-metrics/pull/77",
-          "state": "Open",
-          "created_at": "2026-07-30",
-          "merged_at": null,
-          "repo": "resource-state-metrics"
-        },
-        {
-          "number": 266,
-          "title": "cleanup: remove duplicate KIND_CLUSTER definition in Makefile",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/266",
-          "state": "Merged",
-          "created_at": "2026-05-26",
-          "merged_at": "2026-05-26",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 264,
-          "title": "fix: resolve lint failures from dead code cleanup",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/264",
-          "state": "Merged",
-          "created_at": "2026-05-21",
-          "merged_at": "2026-05-21",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 256,
-          "title": "fix: pass NodeList to processAllNodesForRule in tests",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/256",
-          "state": "Merged",
-          "created_at": "2026-05-15",
-          "merged_at": "2026-05-15",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 246,
-          "title": "webhook: detect matchExpression selector overlaps",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/246",
-          "state": "Merged",
-          "created_at": "2026-05-13",
-          "merged_at": "2026-05-20",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 236,
-          "title": "fix: cleanup taints after node selector mismatch",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/236",
-          "state": "Open",
-          "created_at": "2026-05-10",
-          "merged_at": null,
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 218,
-          "title": "fix: skip NodeEvaluation upsert when evaluation did not run",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/218",
-          "state": "Open",
-          "created_at": "2026-05-06",
-          "merged_at": null,
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 214,
-          "title": "fix: trigger reconcile on rule deletion-timestamp updates",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/214",
-          "state": "Closed",
-          "created_at": "2026-05-05",
-          "merged_at": null,
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 206,
-          "title": "fix: avoid double-counting bootstrap completion metric",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/206",
-          "state": "Merged",
-          "created_at": "2026-05-04",
-          "merged_at": "2026-05-05",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 194,
-          "title": "fix: retry lychee link check on transient upstream errors",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/194",
-          "state": "Merged",
-          "created_at": "2026-05-02",
-          "merged_at": "2026-05-02",
-          "repo": "node-readiness-controller"
-        },
-        {
-          "number": 193,
-          "title": "feat: add Effect and DryRun printcolumns to NodeReadinessRule",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/193",
-          "state": "Merged",
-          "created_at": "2026-05-02",
-          "merged_at": "2026-05-02",
-          "repo": "node-readiness-controller"
-        }
-      ]
-    },
-    {
-      "name": "kubernetes",
-      "merged": 0,
-      "prs": [
-        {
-          "number": 138900,
-          "title": "apimachinery: add selector overlap helper",
-          "url": "https://github.com/kubernetes/kubernetes/pull/138900",
-          "state": "Closed",
-          "created_at": "2026-05-08",
-          "merged_at": null,
-          "repo": "kubernetes"
-        },
-        {
-          "number": 9593,
-          "title": "chart(cluster-autoscaler): default serviceMonitor (metric)Relabelings to []",
-          "url": "https://github.com/kubernetes/autoscaler/pull/9593",
-          "state": "Open",
-          "created_at": "2026-05-05",
-          "merged_at": null,
-          "repo": "autoscaler"
-        },
-        {
-          "number": 138555,
-          "title": "drain: skip eviction retry when pod rescheduled to different node",
-          "url": "https://github.com/kubernetes/kubernetes/pull/138555",
-          "state": "Closed",
-          "created_at": "2026-04-23",
-          "merged_at": null,
-          "repo": "kubernetes"
-        }
-      ]
-    },
-    {
-      "name": "git",
-      "merged": 1,
-      "prs": [
-        {
-          "number": null,
-          "title": "[PATCH] pack-redundant: fix memory leak when open_pack_index() fails",
-          "url": "https://github.com/git/git/commit/7451864bfac0fc7ac829aceecd7f339b80dac732",
-          "state": "Merged",
-          "created_at": "2026-02-21",
-          "merged_at": "2026-02-21",
-          "repo": "git"
-        }
-      ]
-    },
-    {
       "name": "lima-vm",
       "merged": 2,
       "prs": [
@@ -992,219 +1068,6 @@
           "created_at": "2025-11-08",
           "merged_at": "2025-11-12",
           "repo": "kagent"
-        }
-      ]
-    },
-    {
-      "name": "volcano-sh",
-      "merged": 0,
-      "prs": [
-        {
-          "number": 4858,
-          "title": "test: fix flaky TestAllocateWithPVC",
-          "url": "https://github.com/volcano-sh/volcano/pull/4858",
-          "state": "Open",
-          "created_at": "2025-12-22",
-          "merged_at": null,
-          "repo": "volcano"
-        },
-        {
-          "number": 4844,
-          "title": "refactor: use single queue for all workers in job controller",
-          "url": "https://github.com/volcano-sh/volcano/pull/4844",
-          "state": "Closed",
-          "created_at": "2025-12-20",
-          "merged_at": null,
-          "repo": "volcano"
-        },
-        {
-          "number": 493,
-          "title": "chore: remove cert-manager from charts",
-          "url": "https://github.com/volcano-sh/kthena/pull/493",
-          "state": "Closed",
-          "created_at": "2025-11-17",
-          "merged_at": null,
-          "repo": "kthena"
-        }
-      ]
-    },
-    {
-      "name": "osdldbt",
-      "merged": 1,
-      "prs": [
-        {
-          "number": 32,
-          "title": "fix memory leak: free g_tid in Driver::runTest",
-          "url": "https://github.com/osdldbt/dbt5/pull/32",
-          "state": "Closed",
-          "created_at": "2026-02-22",
-          "merged_at": null,
-          "repo": "dbt5"
-        },
-        {
-          "number": 30,
-          "title": "add --stored-proc-type to choose PL/pgSQL vs C when building DB",
-          "url": "https://github.com/osdldbt/dbt5/pull/30",
-          "state": "Closed",
-          "created_at": "2026-02-09",
-          "merged_at": null,
-          "repo": "dbt5"
-        },
-        {
-          "number": 29,
-          "title": "add .gitignore entries for build artifacts and EGenLoader output",
-          "url": "https://github.com/osdldbt/dbt5/pull/29",
-          "state": "Merged (indirect)",
-          "created_at": "2026-02-08",
-          "merged_at": "2026-02-19",
-          "repo": "dbt5"
-        }
-      ]
-    },
-    {
-      "name": "pgmoneta",
-      "merged": 1,
-      "prs": [
-        {
-          "number": 97,
-          "title": "Fix early return in _translate_result dropping sibling fields after Backups array",
-          "url": "https://github.com/pgmoneta/pgmoneta_mcp/pull/97",
-          "state": "Merged (indirect)",
-          "created_at": "2026-04-11",
-          "merged_at": "2026-04-12",
-          "repo": "pgmoneta_mcp"
-        }
-      ]
-    },
-    {
-      "name": "anomalyco",
-      "merged": 0,
-      "prs": [
-        {
-          "number": 17618,
-          "title": "feat(formatters): add stylua, nimpretty, and elm-format formatters",
-          "url": "https://github.com/anomalyco/opencode/pull/17618",
-          "state": "Closed",
-          "created_at": "2026-03-15",
-          "merged_at": null,
-          "repo": "opencode"
-        }
-      ]
-    },
-    {
-      "name": "InternetHealthReport",
-      "merged": 5,
-      "prs": [
-        {
-          "number": 919,
-          "title": "Disbaled Searchbar when map overlay is open",
-          "url": "https://github.com/InternetHealthReport/ihr-website/pull/919",
-          "state": "Merged",
-          "created_at": "2025-02-27",
-          "merged_at": "2025-02-27",
-          "repo": "ihr-website"
-        },
-        {
-          "number": 918,
-          "title": "Added trim function to remove leading or tailing white spaces in the searched term before searching",
-          "url": "https://github.com/InternetHealthReport/ihr-website/pull/918",
-          "state": "Merged",
-          "created_at": "2025-02-26",
-          "merged_at": "2025-02-27",
-          "repo": "ihr-website"
-        },
-        {
-          "number": 909,
-          "title": "fix: Fixed the hiding behavior of sidebar with footer in Documentation.vue",
-          "url": "https://github.com/InternetHealthReport/ihr-website/pull/909",
-          "state": "Merged",
-          "created_at": "2025-02-17",
-          "merged_at": "2025-02-19",
-          "repo": "ihr-website"
-        },
-        {
-          "number": 901,
-          "title": "Added color contrast to the active option in dropdown menu of navbar",
-          "url": "https://github.com/InternetHealthReport/ihr-website/pull/901",
-          "state": "Merged",
-          "created_at": "2025-02-14",
-          "merged_at": "2025-02-14",
-          "repo": "ihr-website"
-        },
-        {
-          "number": 892,
-          "title": "Improved the navbar design in mobile UI for enhanced User Experience",
-          "url": "https://github.com/InternetHealthReport/ihr-website/pull/892",
-          "state": "Merged",
-          "created_at": "2025-02-04",
-          "merged_at": "2025-02-05",
-          "repo": "ihr-website"
-        }
-      ]
-    },
-    {
-      "name": "middlewarehq",
-      "merged": 3,
-      "prs": [
-        {
-          "number": 648,
-          "title": "feature: Added FGTs support in github integration",
-          "url": "https://github.com/middlewarehq/middleware/pull/648",
-          "state": "Closed",
-          "created_at": "2025-04-22",
-          "merged_at": null,
-          "repo": "middleware"
-        },
-        {
-          "number": 642,
-          "title": "Migrated from Clearbit to logo.dev",
-          "url": "https://github.com/middlewarehq/middleware/pull/642",
-          "state": "Merged",
-          "created_at": "2025-04-08",
-          "merged_at": "2025-04-08",
-          "repo": "middleware"
-        },
-        {
-          "number": 602,
-          "title": "Node, Yarn and Docker version check added in dev.sh file",
-          "url": "https://github.com/middlewarehq/middleware/pull/602",
-          "state": "Merged",
-          "created_at": "2024-10-16",
-          "merged_at": "2024-10-17",
-          "repo": "middleware"
-        },
-        {
-          "number": 589,
-          "title": "pre-requisite dependency(node or yarn) version check added in dev.sh file",
-          "url": "https://github.com/middlewarehq/middleware/pull/589",
-          "state": "Closed",
-          "created_at": "2024-10-12",
-          "merged_at": null,
-          "repo": "middleware"
-        },
-        {
-          "number": 586,
-          "title": "Response and Commit to open fields position swaped in LT table",
-          "url": "https://github.com/middlewarehq/middleware/pull/586",
-          "state": "Merged",
-          "created_at": "2024-10-10",
-          "merged_at": "2024-10-10",
-          "repo": "middleware"
-        }
-      ]
-    },
-    {
-      "name": "excalidraw",
-      "merged": 0,
-      "prs": [
-        {
-          "number": 8609,
-          "title": "Fix: Overlap of child element with already existing preset of childs in Flowchart",
-          "url": "https://github.com/excalidraw/excalidraw/pull/8609",
-          "state": "Closed",
-          "created_at": "2024-10-08",
-          "merged_at": null,
-          "repo": "excalidraw"
         }
       ]
     }
