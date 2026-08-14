@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-08-09 12:54 UTC",
+  "generated_at": "2026-08-14 01:10 UTC",
   "totals": {
-    "prs": 112,
+    "prs": 111,
     "merged": 85,
-    "open": 10,
-    "closed": 17
+    "open": 8,
+    "closed": 18
   },
   "orgs": [
     {
@@ -14,36 +14,36 @@
       "prs": [
         {
           "number": null,
-          "title": "wt-status: avoid quadratic insertion for untracked paths",
-          "url": "https://lore.kernel.org/git/20260716185045.229320-1-sahityajb@gmail.com/",
-          "state": "Merged",
-          "status_label": "accepted",
-          "created_at": "2026-07-16",
-          "merged_at": "2026-07-16",
-          "repo": "git.git",
-          "summary": "Reduced status untracked path collection from O(n^2) to O(n log n) by replacing repeated sorted insertions with a single append-and-sort pass."
-        },
-        {
-          "number": null,
           "title": "read-cache: avoid sparse-index expansion on unborn branches",
           "url": "https://lore.kernel.org/git/20260802212826.1090943-1-sahityajb@gmail.com/",
           "state": "Open",
-          "status_label": "review",
           "created_at": "2026-08-02",
           "merged_at": null,
           "repo": "git.git",
-          "summary": "Eliminates unnecessary sparse-index expansion on unborn branches by comparing the index against the empty tree instead of falling back to a full index walk. Added test coverage for nested directory paths without performance degradation."
+          "summary": "Eliminates unnecessary sparse-index expansion on unborn branches by comparing the index against the empty tree instead of falling back to a full index walk. Added test coverage for nested directory paths without performance degradation.",
+          "status_label": "review"
+        },
+        {
+          "number": null,
+          "title": "wt-status: avoid quadratic insertion for untracked paths",
+          "url": "https://lore.kernel.org/git/20260716185045.229320-1-sahityajb@gmail.com/",
+          "state": "Merged",
+          "created_at": "2026-07-16",
+          "merged_at": "2026-07-16",
+          "repo": "git.git",
+          "summary": "Reduced status untracked path collection from O(n^2) to O(n log n) by replacing repeated sorted insertions with a single append-and-sort pass.",
+          "status_label": "accepted"
         },
         {
           "number": null,
           "title": "[PATCH] pack-redundant: fix memory leak when open_pack_index() fails",
           "url": "https://lore.kernel.org/git/20260221103900.41740-1-sahityajb@gmail.com/",
           "state": "Merged",
-          "status_label": "accepted",
           "created_at": "2026-02-21",
           "merged_at": "2026-02-21",
           "repo": "git.git",
-          "summary": "Fixes a memory leak in add_pack() when open_pack_index() fails."
+          "summary": "Fixes a memory leak in add_pack() when open_pack_index() fails.",
+          "status_label": "accepted"
         }
       ]
     },
@@ -76,15 +76,6 @@
           "state": "Merged",
           "created_at": "2026-07-06",
           "merged_at": "2026-07-07",
-          "repo": "prometheus"
-        },
-        {
-          "number": 19099,
-          "title": "web/api/v1: parallelize TestApiStatusCodes subtests",
-          "url": "https://github.com/prometheus/prometheus/pull/19099",
-          "state": "Open",
-          "created_at": "2026-07-04",
-          "merged_at": null,
           "repo": "prometheus"
         }
       ]
@@ -184,18 +175,18 @@
           "repo": "node-readiness-controller"
         },
         {
-          "number": 193,
-          "title": "feat: add Effect and DryRun printcolumns to NodeReadinessRule",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/193",
+          "number": 194,
+          "title": "fix: retry lychee link check on transient upstream errors",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/194",
           "state": "Merged",
           "created_at": "2026-05-02",
           "merged_at": "2026-05-02",
           "repo": "node-readiness-controller"
         },
         {
-          "number": 194,
-          "title": "fix: retry lychee link check on transient upstream errors",
-          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/194",
+          "number": 193,
+          "title": "feat: add Effect and DryRun printcolumns to NodeReadinessRule",
+          "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/193",
           "state": "Merged",
           "created_at": "2026-05-02",
           "merged_at": "2026-05-02",
@@ -245,7 +236,7 @@
           "number": 28967,
           "title": "fix: push Docker images to calcom/cal.com instead of calcom/cal.diy",
           "url": "https://github.com/calcom/cal.diy/pull/28967",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-04-22",
           "merged_at": null,
           "repo": "cal.diy"
