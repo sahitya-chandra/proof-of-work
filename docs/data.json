@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-09-19 02:20 UTC",
+  "generated_at": "2026-09-20 02:29 UTC",
   "totals": {
     "prs": 111,
     "merged": 85,
-    "open": 8,
-    "closed": 18
+    "open": 7,
+    "closed": 19
   },
   "orgs": [
     {
@@ -151,7 +151,7 @@
           "number": 218,
           "title": "fix: skip NodeEvaluation upsert when evaluation did not run",
           "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/218",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-05-06",
           "merged_at": null,
           "repo": "node-readiness-controller"
