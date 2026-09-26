@@ -1,10 +1,10 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-09-25 02:36 UTC",
+  "generated_at": "2026-09-26 02:38 UTC",
   "totals": {
-    "prs": 111,
-    "merged": 85,
-    "open": 7,
+    "prs": 101,
+    "merged": 76,
+    "open": 6,
     "closed": 19
   },
   "orgs": [
@@ -230,7 +230,7 @@
     },
     {
       "name": "calcom",
-      "merged": 32,
+      "merged": 23,
       "prs": [
         {
           "number": 28967,
@@ -267,78 +267,6 @@
           "created_at": "2026-04-08",
           "merged_at": "2026-04-08",
           "repo": "cal.diy"
-        },
-        {
-          "number": 75,
-          "title": "fix: fix busy-times 400 errors, surface full API error bodies, and fix booking location schema",
-          "url": "https://github.com/calcom/companion/pull/75",
-          "state": "Merged",
-          "created_at": "2026-04-07",
-          "merged_at": "2026-04-07",
-          "repo": "companion"
-        },
-        {
-          "number": 74,
-          "title": "fix: correct MCP tool schemas against Cal.com API v2 spec",
-          "url": "https://github.com/calcom/companion/pull/74",
-          "state": "Merged",
-          "created_at": "2026-04-07",
-          "merged_at": "2026-04-09",
-          "repo": "companion"
-        },
-        {
-          "number": 73,
-          "title": "fix: rename SERVER_URL to MCP_SERVER_URL in docker-compose.yml",
-          "url": "https://github.com/calcom/companion/pull/73",
-          "state": "Merged",
-          "created_at": "2026-04-07",
-          "merged_at": "2026-04-07",
-          "repo": "companion"
-        },
-        {
-          "number": 72,
-          "title": "fix: improve MCP tool descriptions and add missing critical parameters",
-          "url": "https://github.com/calcom/companion/pull/72",
-          "state": "Merged",
-          "created_at": "2026-04-06",
-          "merged_at": "2026-04-07",
-          "repo": "companion"
-        },
-        {
-          "number": 71,
-          "title": "fix: audit all 33 MCP tools against Cal.com API v2 OpenAPI spec",
-          "url": "https://github.com/calcom/companion/pull/71",
-          "state": "Merged",
-          "created_at": "2026-04-06",
-          "merged_at": "2026-04-06",
-          "repo": "companion"
-        },
-        {
-          "number": 70,
-          "title": "fix: add parentheses around ?? || expressions to fix MCP server build",
-          "url": "https://github.com/calcom/companion/pull/70",
-          "state": "Merged",
-          "created_at": "2026-04-06",
-          "merged_at": "2026-04-06",
-          "repo": "companion"
-        },
-        {
-          "number": 69,
-          "title": "fix: resolve Cal.com API v2 versioning issues and reduce token overhead",
-          "url": "https://github.com/calcom/companion/pull/69",
-          "state": "Merged",
-          "created_at": "2026-04-05",
-          "merged_at": "2026-04-06",
-          "repo": "companion"
-        },
-        {
-          "number": 68,
-          "title": "feat(mcp-server): production-grade improvements",
-          "url": "https://github.com/calcom/companion/pull/68",
-          "state": "Merged",
-          "created_at": "2026-04-02",
-          "merged_at": "2026-04-04",
-          "repo": "companion"
         },
         {
           "number": 28683,
@@ -386,15 +314,6 @@
           "repo": "cal.diy"
         },
         {
-          "number": 62,
-          "title": "feat: Add Cal.com MCP Server",
-          "url": "https://github.com/calcom/companion/pull/62",
-          "state": "Merged",
-          "created_at": "2026-03-25",
-          "merged_at": "2026-03-31",
-          "repo": "companion"
-        },
-        {
           "number": 28387,
           "title": "feat(unified-cal): connection-based unified calendar API with CRUD, freebusy, and list connections",
           "url": "https://github.com/calcom/cal.diy/pull/28387",
@@ -402,15 +321,6 @@
           "created_at": "2026-03-12",
           "merged_at": "2026-03-18",
           "repo": "cal.diy"
-        },
-        {
-          "number": 31,
-          "title": "feat(cli): add unified calendar API commands",
-          "url": "https://github.com/calcom/companion/pull/31",
-          "state": "Open",
-          "created_at": "2026-03-12",
-          "merged_at": null,
-          "repo": "companion"
         },
         {
           "number": 28297,
