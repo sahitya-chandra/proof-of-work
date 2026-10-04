@@ -1,10 +1,10 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-10-03 03:00 UTC",
+  "generated_at": "2026-10-04 03:30 UTC",
   "totals": {
-    "prs": 111,
+    "prs": 112,
     "merged": 85,
-    "open": 6,
+    "open": 7,
     "closed": 20
   },
   "orgs": [
@@ -232,6 +232,15 @@
       "name": "calcom",
       "merged": 32,
       "prs": [
+        {
+          "number": 30198,
+          "title": "fix(ci): restore release parsing and resolve critical audit failures",
+          "url": "https://github.com/calcom/cal.diy/pull/30198",
+          "state": "Open",
+          "created_at": "2026-09-20",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
         {
           "number": 28967,
           "title": "fix: push Docker images to calcom/cal.com instead of calcom/cal.diy",
