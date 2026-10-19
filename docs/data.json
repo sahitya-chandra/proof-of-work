@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-10-18 02:13 UTC",
+  "generated_at": "2026-10-19 02:29 UTC",
   "totals": {
     "prs": 112,
     "merged": 85,
-    "open": 7,
-    "closed": 20
+    "open": 6,
+    "closed": 21
   },
   "orgs": [
     {
@@ -236,7 +236,7 @@
           "number": 30198,
           "title": "fix(ci): restore release parsing and resolve critical audit failures",
           "url": "https://github.com/calcom/cal.diy/pull/30198",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-09-20",
           "merged_at": null,
           "repo": "cal.diy"
