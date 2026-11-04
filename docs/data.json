@@ -1,11 +1,11 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-11-03 04:41 UTC",
+  "generated_at": "2026-11-04 04:01 UTC",
   "totals": {
     "prs": 113,
-    "merged": 86,
-    "open": 7,
-    "closed": 20
+    "merged": 87,
+    "open": 5,
+    "closed": 21
   },
   "orgs": [
     {
@@ -142,7 +142,7 @@
           "number": 236,
           "title": "fix: cleanup taints after node selector mismatch",
           "url": "https://github.com/kubernetes-sigs/node-readiness-controller/pull/236",
-          "state": "Open",
+          "state": "Closed",
           "created_at": "2026-05-10",
           "merged_at": null,
           "repo": "node-readiness-controller"
@@ -230,15 +230,15 @@
     },
     {
       "name": "calcom",
-      "merged": 33,
+      "merged": 34,
       "prs": [
         {
           "number": 30445,
           "title": "chore(atoms): stop publishing @calcom/atoms from cal.diy",
           "url": "https://github.com/calcom/cal.diy/pull/30445",
-          "state": "Open",
+          "state": "Merged",
           "created_at": "2026-10-28",
-          "merged_at": null,
+          "merged_at": "2026-11-03",
           "repo": "cal.diy"
         },
         {
