@@ -1,10 +1,10 @@
 {
   "username": "sahitya-chandra",
-  "generated_at": "2026-11-11 00:11 UTC",
+  "generated_at": "2026-11-12 00:11 UTC",
   "totals": {
-    "prs": 113,
+    "prs": 114,
     "merged": 87,
-    "open": 4,
+    "open": 5,
     "closed": 22
   },
   "orgs": [
@@ -232,6 +232,15 @@
       "name": "calcom",
       "merged": 34,
       "prs": [
+        {
+          "number": 30564,
+          "title": "fix(ci): restore CI for fork PRs and fail required when prepare fails",
+          "url": "https://github.com/calcom/cal.diy/pull/30564",
+          "state": "Open",
+          "created_at": "2026-11-11",
+          "merged_at": null,
+          "repo": "cal.diy"
+        },
         {
           "number": 30445,
           "title": "chore(atoms): stop publishing @calcom/atoms from cal.diy",
